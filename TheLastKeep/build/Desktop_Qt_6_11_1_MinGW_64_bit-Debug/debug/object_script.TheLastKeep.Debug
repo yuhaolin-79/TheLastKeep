@@ -1,0 +1,16 @@
+debug/Castle.o
+debug/Mainwindow.o
+debug/bullet.o
+debug/card.o
+debug/cardmanager.o
+debug/enemy.o
+debug/gamecontroller.o
+debug/gamescene.o
+debug/main.o
+debug/tower.o
+debug/qrc_resource.o
+debug/moc_Mainwindow.o
+debug/moc_card.o
+debug/moc_cardmanager.o
+debug/moc_gamecontroller.o
+debug/moc_gamescene.o

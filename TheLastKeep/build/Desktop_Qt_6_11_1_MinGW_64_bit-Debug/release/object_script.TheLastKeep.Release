@@ -1,0 +1,16 @@
+release/Castle.o
+release/Mainwindow.o
+release/bullet.o
+release/card.o
+release/cardmanager.o
+release/enemy.o
+release/gamecontroller.o
+release/gamescene.o
+release/main.o
+release/tower.o
+release/qrc_resource.o
+release/moc_Mainwindow.o
+release/moc_card.o
+release/moc_cardmanager.o
+release/moc_gamecontroller.o
+release/moc_gamescene.o
