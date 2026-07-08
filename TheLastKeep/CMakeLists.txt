@@ -14,6 +14,12 @@ qt_add_executable(TheLastKeep
     src/game/GameScene.h
     src/game/GameScene.cpp
     # resources/resources.qrc
+    src/game/GameMap.h
+    src/game/GameMap.cpp
+    src/game/LevelData.h
+    src/game/LevelData.cpp
+    src/game/LevelManager.h
+    src/game/LevelManager.cpp
 )
 
 qt_add_resources(TheLastKeep "game_resources"
@@ -21,6 +27,7 @@ qt_add_resources(TheLastKeep "game_resources"
     BASE "resources"
     FILES
         resources/images/background.png
+        resources/images/tutorialLevelMap.png
 )
 
 target_include_directories(TheLastKeep

@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     setWindowTitle("The Last Keep");
-    resize(1280, 720);
+    resize(1280, 720); //v0.1的分辨率 @fish
 
     m_scene = new GameScene(this); // 创建游戏场景，父对象为MainWindow
 

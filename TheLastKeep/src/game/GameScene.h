@@ -2,6 +2,8 @@
 
 #include <QGraphicsScene>
 
+#include "game/GameMap.h"
+
 class GameScene : public QGraphicsScene{
     Q_OBJECT
 
@@ -10,4 +12,13 @@ public:
 
 private:
     void buildDemoMap();
+
+protected:
+    void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
+
+private:
+    void loadTutorialLevel();
+
+private:
+    GameMap m_map;
 };
