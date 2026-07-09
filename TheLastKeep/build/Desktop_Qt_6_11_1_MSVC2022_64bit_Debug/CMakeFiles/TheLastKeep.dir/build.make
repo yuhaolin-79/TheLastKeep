@@ -125,230 +125,510 @@ CMakeFiles\TheLastKeep.dir\src\ui\Mainwindow.cpp.s: cmake_force
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\Mainwindow.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\Mainwindow.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\GameScene.cpp
-CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/GameScene.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\GameScene.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\pages\StartPage.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/pages/StartPage.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\pages\StartPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/GameScene.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\GameScene.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/pages/StartPage.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\pages\StartPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/GameScene.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/pages/StartPage.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\GameScene.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\pages\StartPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\GameMap.cpp
-CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/GameMap.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\GameMap.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\pages\LevelSelectPage.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/pages/LevelSelectPage.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\pages\LevelSelectPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/GameMap.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\GameMap.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/pages/LevelSelectPage.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\pages\LevelSelectPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/GameMap.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/pages/LevelSelectPage.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\GameMap.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\pages\LevelSelectPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\LevelData.cpp
-CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/LevelData.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\LevelData.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\pages\GamePage.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/pages/GamePage.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\pages\GamePage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/LevelData.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\LevelData.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/pages/GamePage.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\pages\GamePage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/LevelData.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/pages/GamePage.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\LevelData.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\pages\GamePage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\LevelManager.cpp
-CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/LevelManager.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\LevelManager.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\pages\ResultPage.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/pages/ResultPage.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\pages\ResultPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/LevelManager.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\LevelManager.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/pages/ResultPage.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\pages\ResultPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/LevelManager.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/pages/ResultPage.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\LevelManager.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\pages\ResultPage.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\enemy.cpp
-CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/enemy.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\enemy.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\widgets\HUDWidget.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/widgets/HUDWidget.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\widgets\HUDWidget.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/enemy.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\enemy.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/widgets/HUDWidget.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\widgets\HUDWidget.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/enemy.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/widgets/HUDWidget.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\enemy.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\widgets\HUDWidget.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\tower.cpp
-CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/tower.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\tower.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\widgets\CardSelectWidget.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/widgets/CardSelectWidget.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\widgets\CardSelectWidget.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/tower.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\tower.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/widgets/CardSelectWidget.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\widgets\CardSelectWidget.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/tower.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/widgets/CardSelectWidget.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\tower.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\tower.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\widgets\CardSelectWidget.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\bullet.cpp
-CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/bullet.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\bullet.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj: E:\TheLastKeep\TheLastKeep\src\ui\widgets\PauseOverlay.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/TheLastKeep.dir/src/ui/widgets/PauseOverlay.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\ui\widgets\PauseOverlay.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/bullet.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\bullet.cpp
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/ui/widgets/PauseOverlay.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\ui\widgets\PauseOverlay.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/bullet.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/ui/widgets/PauseOverlay.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\bullet.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.s /c E:\TheLastKeep\TheLastKeep\src\ui\widgets\PauseOverlay.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\castle.cpp
-CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/castle.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\castle.cpp
+CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj: E:\TheLastKeep\TheLastKeep\src\scene\GameScene.cpp
+CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/TheLastKeep.dir/src/scene/GameScene.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\scene\GameScene.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/castle.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\castle.cpp
+CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/scene/GameScene.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\scene\GameScene.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/castle.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/scene/GameScene.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\castle.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\castle.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.s /c E:\TheLastKeep\TheLastKeep\src\scene\GameScene.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\gamecontroller.cpp
-CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/gamecontroller.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\gamecontroller.cpp
+CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj: E:\TheLastKeep\TheLastKeep\src\core\GameController.cpp
+CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/TheLastKeep.dir/src/core/GameController.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\core\GameController.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/gamecontroller.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\gamecontroller.cpp
+CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/core/GameController.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\core\GameController.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/gamecontroller.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/core/GameController.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\gamecontroller.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.s /c E:\TheLastKeep\TheLastKeep\src\core\GameController.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\card.cpp
-CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/card.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\card.cpp
+CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\core\StateManager.cpp
+CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/TheLastKeep.dir/src/core/StateManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\core\StateManager.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\card.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/card.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\card.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\card.cpp
+CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/core/StateManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\core\StateManager.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\card.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/card.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/core/StateManager.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\card.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\card.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\core\StateManager.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
-CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\game\cardmanager.cpp
-CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TheLastKeep.dir/src/game/cardmanager.cpp.obj"
-	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\game\cardmanager.cpp
+CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj: E:\TheLastKeep\TheLastKeep\src\core\BattleSystem.cpp
+CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/TheLastKeep.dir/src/core/BattleSystem.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\core\BattleSystem.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/game/cardmanager.cpp.i"
-	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\game\cardmanager.cpp
+CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/core/BattleSystem.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\core\BattleSystem.cpp
 <<
 
-CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/game/cardmanager.cpp.s"
+CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/core/BattleSystem.cpp.s"
 	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\game\cardmanager.cpp
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.s /c E:\TheLastKeep\TheLastKeep\src\core\BattleSystem.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj: E:\TheLastKeep\TheLastKeep\src\core\CollisionSystem.cpp
+CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TheLastKeep.dir/src/core/CollisionSystem.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\core\CollisionSystem.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/core/CollisionSystem.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\core\CollisionSystem.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/core/CollisionSystem.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.s /c E:\TheLastKeep\TheLastKeep\src\core\CollisionSystem.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj: E:\TheLastKeep\TheLastKeep\src\map\GameMap.cpp
+CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/TheLastKeep.dir/src/map/GameMap.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\map\GameMap.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/map/GameMap.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\map\GameMap.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/map/GameMap.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.s /c E:\TheLastKeep\TheLastKeep\src\map\GameMap.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj: E:\TheLastKeep\TheLastKeep\src\level\LevelData.cpp
+CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/TheLastKeep.dir/src/level/LevelData.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\level\LevelData.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/level/LevelData.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\level\LevelData.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/level/LevelData.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.s /c E:\TheLastKeep\TheLastKeep\src\level\LevelData.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\level\LevelManager.cpp
+CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/TheLastKeep.dir/src/level/LevelManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\level\LevelManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/level/LevelManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\level\LevelManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/level/LevelManager.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\level\LevelManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj: E:\TheLastKeep\TheLastKeep\src\entity\Enemy.cpp
+CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/TheLastKeep.dir/src/entity/Enemy.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\entity\Enemy.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/entity/Enemy.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\entity\Enemy.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/entity/Enemy.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.s /c E:\TheLastKeep\TheLastKeep\src\entity\Enemy.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj: E:\TheLastKeep\TheLastKeep\src\entity\Tower.cpp
+CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/TheLastKeep.dir/src/entity/Tower.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\entity\Tower.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/entity/Tower.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\entity\Tower.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/entity/Tower.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.s /c E:\TheLastKeep\TheLastKeep\src\entity\Tower.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj: E:\TheLastKeep\TheLastKeep\src\entity\Bullet.cpp
+CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/TheLastKeep.dir/src/entity/Bullet.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\entity\Bullet.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/entity/Bullet.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\entity\Bullet.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/entity/Bullet.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.s /c E:\TheLastKeep\TheLastKeep\src\entity\Bullet.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj: E:\TheLastKeep\TheLastKeep\src\entity\Castle.cpp
+CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/TheLastKeep.dir/src/entity/Castle.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\entity\Castle.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/entity/Castle.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\entity\Castle.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/entity/Castle.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.s /c E:\TheLastKeep\TheLastKeep\src\entity\Castle.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj: E:\TheLastKeep\TheLastKeep\src\card\Card.cpp
+CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/TheLastKeep.dir/src/card/Card.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\card\Card.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/card/Card.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\card\Card.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/card/Card.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\card\Card.cpp.s /c E:\TheLastKeep\TheLastKeep\src\card\Card.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\card\CardManager.cpp
+CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/TheLastKeep.dir/src/card/CardManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\card\CardManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/card/CardManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\card\CardManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/card/CardManager.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\card\CardManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\data\ResourceManager.cpp
+CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/TheLastKeep.dir/src/data/ResourceManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\data\ResourceManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/data/ResourceManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\data\ResourceManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/data/ResourceManager.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\data\ResourceManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\data\ConfigManager.cpp
+CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/TheLastKeep.dir/src/data/ConfigManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\data\ConfigManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/data/ConfigManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\data\ConfigManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/data/ConfigManager.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\data\ConfigManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\data\SaveManager.cpp
+CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/TheLastKeep.dir/src/data/SaveManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\data\SaveManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/data/SaveManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\data\SaveManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/data/SaveManager.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\data\SaveManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
+CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj: E:\TheLastKeep\TheLastKeep\src\data\SoundManager.cpp
+CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/TheLastKeep.dir/src/data/SoundManager.cpp.obj"
+	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\src\data\SoundManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/TheLastKeep.dir/src/data/SoundManager.cpp.i"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" > CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E E:\TheLastKeep\TheLastKeep\src\data\SoundManager.cpp
+<<
+
+CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/TheLastKeep.dir/src/data/SoundManager.cpp.s"
+	"E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.s /c E:\TheLastKeep\TheLastKeep\src\data\SoundManager.cpp
 <<
 
 CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj: CMakeFiles\TheLastKeep.dir\flags.make
 CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj: .qt\rcc\qrc_game_resources.cpp
 CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj: CMakeFiles\TheLastKeep.dir\compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/TheLastKeep.dir/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/.qt/rcc/qrc_game_resources.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/TheLastKeep.dir/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/.qt/rcc/qrc_game_resources.cpp.obj"
 	$(CMAKE_COMMAND) -E cmake_cl_compile_depends --dep-file=CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj.d --working-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug --filter-prefix="注意: 包含文件:  " -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\HostX64\x64\cl.exe" @<<
  /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /showIncludes /FoCMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj /FdCMakeFiles\TheLastKeep.dir\ /FS -c E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp
 <<
@@ -370,17 +650,31 @@ TheLastKeep_OBJECTS = \
 "CMakeFiles\TheLastKeep.dir\TheLastKeep_autogen\mocs_compilation.cpp.obj" \
 "CMakeFiles\TheLastKeep.dir\src\main.cpp.obj" \
 "CMakeFiles\TheLastKeep.dir\src\ui\Mainwindow.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj" \
-"CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj" \
+"CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj" \
 "CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj"
 
 # External object files for target TheLastKeep
@@ -389,17 +683,31 @@ TheLastKeep_EXTERNAL_OBJECTS =
 TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\TheLastKeep_autogen\mocs_compilation.cpp.obj
 TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\main.cpp.obj
 TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\Mainwindow.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj
-TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj
+TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj
 TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.obj
 TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\build.make
 TheLastKeep.exe: C:\Qt\6.11.1\msvc2022_64\lib\Qt6Widgetsd.lib
@@ -408,7 +716,7 @@ TheLastKeep.exe: C:\Qt\6.11.1\msvc2022_64\lib\Qt6Cored.lib
 TheLastKeep.exe: C:\Qt\6.11.1\msvc2022_64\lib\Qt6EntryPointd.lib
 TheLastKeep.exe: TheLastKeep.exe.manifest
 TheLastKeep.exe: CMakeFiles\TheLastKeep.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable TheLastKeep.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable TheLastKeep.exe"
 	C:\Qt\Tools\CMake_64\bin\cmake.exe -E vs_link_exe --intdir=CMakeFiles\TheLastKeep.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100261~1.0\x64\mt.exe --manifests TheLastKeep.exe.manifest -- "E:\Visual Studio\VC\Tools\MSVC\14.44.35207\bin\Hostx64\x64\link.exe" /nologo @CMakeFiles\TheLastKeep.dir\objects1.rsp @<<
  /out:TheLastKeep.exe /implib:TheLastKeep.lib /pdb:E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\TheLastKeep.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:windows /MANIFEST:NO  C:\Qt\6.11.1\msvc2022_64\lib\Qt6Widgetsd.lib C:\Qt\6.11.1\msvc2022_64\lib\Qt6Guid.lib C:\Qt\6.11.1\msvc2022_64\lib\Qt6Cored.lib mpr.lib userenv.lib C:\Qt\6.11.1\msvc2022_64\lib\Qt6EntryPointd.lib shell32.lib d3d11.lib dxgi.lib dxguid.lib d3d12.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

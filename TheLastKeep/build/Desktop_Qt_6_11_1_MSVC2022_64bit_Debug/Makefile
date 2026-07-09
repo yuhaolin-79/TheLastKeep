@@ -225,269 +225,389 @@ build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.s
 .PHONY : build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\.qt\rcc\qrc_game_resources.cpp.s
 
-src\game\GameMap.obj: src\game\GameMap.cpp.obj
-.PHONY : src\game\GameMap.obj
+src\card\Card.obj: src\card\Card.cpp.obj
+.PHONY : src\card\Card.obj
 
 # target to build an object file
-src\game\GameMap.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.obj
-.PHONY : src\game\GameMap.cpp.obj
+src\card\Card.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.obj
+.PHONY : src\card\Card.cpp.obj
 
-src\game\GameMap.i: src\game\GameMap.cpp.i
-.PHONY : src\game\GameMap.i
+src\card\Card.i: src\card\Card.cpp.i
+.PHONY : src\card\Card.i
 
 # target to preprocess a source file
-src\game\GameMap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.i
-.PHONY : src\game\GameMap.cpp.i
+src\card\Card.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.i
+.PHONY : src\card\Card.cpp.i
 
-src\game\GameMap.s: src\game\GameMap.cpp.s
-.PHONY : src\game\GameMap.s
+src\card\Card.s: src\card\Card.cpp.s
+.PHONY : src\card\Card.s
 
 # target to generate assembly for a file
-src\game\GameMap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\GameMap.cpp.s
-.PHONY : src\game\GameMap.cpp.s
+src\card\Card.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\card\Card.cpp.s
+.PHONY : src\card\Card.cpp.s
 
-src\game\GameScene.obj: src\game\GameScene.cpp.obj
-.PHONY : src\game\GameScene.obj
+src\card\CardManager.obj: src\card\CardManager.cpp.obj
+.PHONY : src\card\CardManager.obj
 
 # target to build an object file
-src\game\GameScene.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.obj
-.PHONY : src\game\GameScene.cpp.obj
+src\card\CardManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.obj
+.PHONY : src\card\CardManager.cpp.obj
 
-src\game\GameScene.i: src\game\GameScene.cpp.i
-.PHONY : src\game\GameScene.i
+src\card\CardManager.i: src\card\CardManager.cpp.i
+.PHONY : src\card\CardManager.i
 
 # target to preprocess a source file
-src\game\GameScene.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.i
-.PHONY : src\game\GameScene.cpp.i
+src\card\CardManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.i
+.PHONY : src\card\CardManager.cpp.i
 
-src\game\GameScene.s: src\game\GameScene.cpp.s
-.PHONY : src\game\GameScene.s
+src\card\CardManager.s: src\card\CardManager.cpp.s
+.PHONY : src\card\CardManager.s
 
 # target to generate assembly for a file
-src\game\GameScene.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\GameScene.cpp.s
-.PHONY : src\game\GameScene.cpp.s
+src\card\CardManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\card\CardManager.cpp.s
+.PHONY : src\card\CardManager.cpp.s
 
-src\game\LevelData.obj: src\game\LevelData.cpp.obj
-.PHONY : src\game\LevelData.obj
+src\core\BattleSystem.obj: src\core\BattleSystem.cpp.obj
+.PHONY : src\core\BattleSystem.obj
 
 # target to build an object file
-src\game\LevelData.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.obj
-.PHONY : src\game\LevelData.cpp.obj
+src\core\BattleSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.obj
+.PHONY : src\core\BattleSystem.cpp.obj
 
-src\game\LevelData.i: src\game\LevelData.cpp.i
-.PHONY : src\game\LevelData.i
+src\core\BattleSystem.i: src\core\BattleSystem.cpp.i
+.PHONY : src\core\BattleSystem.i
 
 # target to preprocess a source file
-src\game\LevelData.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.i
-.PHONY : src\game\LevelData.cpp.i
+src\core\BattleSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.i
+.PHONY : src\core\BattleSystem.cpp.i
 
-src\game\LevelData.s: src\game\LevelData.cpp.s
-.PHONY : src\game\LevelData.s
+src\core\BattleSystem.s: src\core\BattleSystem.cpp.s
+.PHONY : src\core\BattleSystem.s
 
 # target to generate assembly for a file
-src\game\LevelData.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\LevelData.cpp.s
-.PHONY : src\game\LevelData.cpp.s
+src\core\BattleSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\BattleSystem.cpp.s
+.PHONY : src\core\BattleSystem.cpp.s
 
-src\game\LevelManager.obj: src\game\LevelManager.cpp.obj
-.PHONY : src\game\LevelManager.obj
+src\core\CollisionSystem.obj: src\core\CollisionSystem.cpp.obj
+.PHONY : src\core\CollisionSystem.obj
 
 # target to build an object file
-src\game\LevelManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.obj
-.PHONY : src\game\LevelManager.cpp.obj
+src\core\CollisionSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.obj
+.PHONY : src\core\CollisionSystem.cpp.obj
 
-src\game\LevelManager.i: src\game\LevelManager.cpp.i
-.PHONY : src\game\LevelManager.i
+src\core\CollisionSystem.i: src\core\CollisionSystem.cpp.i
+.PHONY : src\core\CollisionSystem.i
 
 # target to preprocess a source file
-src\game\LevelManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.i
-.PHONY : src\game\LevelManager.cpp.i
+src\core\CollisionSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.i
+.PHONY : src\core\CollisionSystem.cpp.i
 
-src\game\LevelManager.s: src\game\LevelManager.cpp.s
-.PHONY : src\game\LevelManager.s
+src\core\CollisionSystem.s: src\core\CollisionSystem.cpp.s
+.PHONY : src\core\CollisionSystem.s
 
 # target to generate assembly for a file
-src\game\LevelManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\LevelManager.cpp.s
-.PHONY : src\game\LevelManager.cpp.s
+src\core\CollisionSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\CollisionSystem.cpp.s
+.PHONY : src\core\CollisionSystem.cpp.s
 
-src\game\bullet.obj: src\game\bullet.cpp.obj
-.PHONY : src\game\bullet.obj
+src\core\GameController.obj: src\core\GameController.cpp.obj
+.PHONY : src\core\GameController.obj
 
 # target to build an object file
-src\game\bullet.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.obj
-.PHONY : src\game\bullet.cpp.obj
+src\core\GameController.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.obj
+.PHONY : src\core\GameController.cpp.obj
 
-src\game\bullet.i: src\game\bullet.cpp.i
-.PHONY : src\game\bullet.i
+src\core\GameController.i: src\core\GameController.cpp.i
+.PHONY : src\core\GameController.i
 
 # target to preprocess a source file
-src\game\bullet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.i
-.PHONY : src\game\bullet.cpp.i
+src\core\GameController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.i
+.PHONY : src\core\GameController.cpp.i
 
-src\game\bullet.s: src\game\bullet.cpp.s
-.PHONY : src\game\bullet.s
+src\core\GameController.s: src\core\GameController.cpp.s
+.PHONY : src\core\GameController.s
 
 # target to generate assembly for a file
-src\game\bullet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\bullet.cpp.s
-.PHONY : src\game\bullet.cpp.s
+src\core\GameController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\GameController.cpp.s
+.PHONY : src\core\GameController.cpp.s
 
-src\game\card.obj: src\game\card.cpp.obj
-.PHONY : src\game\card.obj
+src\core\StateManager.obj: src\core\StateManager.cpp.obj
+.PHONY : src\core\StateManager.obj
 
 # target to build an object file
-src\game\card.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\card.cpp.obj
-.PHONY : src\game\card.cpp.obj
+src\core\StateManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.obj
+.PHONY : src\core\StateManager.cpp.obj
 
-src\game\card.i: src\game\card.cpp.i
-.PHONY : src\game\card.i
+src\core\StateManager.i: src\core\StateManager.cpp.i
+.PHONY : src\core\StateManager.i
 
 # target to preprocess a source file
-src\game\card.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\card.cpp.i
-.PHONY : src\game\card.cpp.i
+src\core\StateManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.i
+.PHONY : src\core\StateManager.cpp.i
 
-src\game\card.s: src\game\card.cpp.s
-.PHONY : src\game\card.s
+src\core\StateManager.s: src\core\StateManager.cpp.s
+.PHONY : src\core\StateManager.s
 
 # target to generate assembly for a file
-src\game\card.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\card.cpp.s
-.PHONY : src\game\card.cpp.s
+src\core\StateManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\core\StateManager.cpp.s
+.PHONY : src\core\StateManager.cpp.s
 
-src\game\cardmanager.obj: src\game\cardmanager.cpp.obj
-.PHONY : src\game\cardmanager.obj
+src\data\ConfigManager.obj: src\data\ConfigManager.cpp.obj
+.PHONY : src\data\ConfigManager.obj
 
 # target to build an object file
-src\game\cardmanager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.obj
-.PHONY : src\game\cardmanager.cpp.obj
+src\data\ConfigManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.obj
+.PHONY : src\data\ConfigManager.cpp.obj
 
-src\game\cardmanager.i: src\game\cardmanager.cpp.i
-.PHONY : src\game\cardmanager.i
+src\data\ConfigManager.i: src\data\ConfigManager.cpp.i
+.PHONY : src\data\ConfigManager.i
 
 # target to preprocess a source file
-src\game\cardmanager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.i
-.PHONY : src\game\cardmanager.cpp.i
+src\data\ConfigManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.i
+.PHONY : src\data\ConfigManager.cpp.i
 
-src\game\cardmanager.s: src\game\cardmanager.cpp.s
-.PHONY : src\game\cardmanager.s
+src\data\ConfigManager.s: src\data\ConfigManager.cpp.s
+.PHONY : src\data\ConfigManager.s
 
 # target to generate assembly for a file
-src\game\cardmanager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\cardmanager.cpp.s
-.PHONY : src\game\cardmanager.cpp.s
+src\data\ConfigManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\ConfigManager.cpp.s
+.PHONY : src\data\ConfigManager.cpp.s
 
-src\game\castle.obj: src\game\castle.cpp.obj
-.PHONY : src\game\castle.obj
+src\data\ResourceManager.obj: src\data\ResourceManager.cpp.obj
+.PHONY : src\data\ResourceManager.obj
 
 # target to build an object file
-src\game\castle.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.obj
-.PHONY : src\game\castle.cpp.obj
+src\data\ResourceManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.obj
+.PHONY : src\data\ResourceManager.cpp.obj
 
-src\game\castle.i: src\game\castle.cpp.i
-.PHONY : src\game\castle.i
+src\data\ResourceManager.i: src\data\ResourceManager.cpp.i
+.PHONY : src\data\ResourceManager.i
 
 # target to preprocess a source file
-src\game\castle.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.i
-.PHONY : src\game\castle.cpp.i
+src\data\ResourceManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.i
+.PHONY : src\data\ResourceManager.cpp.i
 
-src\game\castle.s: src\game\castle.cpp.s
-.PHONY : src\game\castle.s
+src\data\ResourceManager.s: src\data\ResourceManager.cpp.s
+.PHONY : src\data\ResourceManager.s
 
 # target to generate assembly for a file
-src\game\castle.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\castle.cpp.s
-.PHONY : src\game\castle.cpp.s
+src\data\ResourceManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\ResourceManager.cpp.s
+.PHONY : src\data\ResourceManager.cpp.s
 
-src\game\enemy.obj: src\game\enemy.cpp.obj
-.PHONY : src\game\enemy.obj
+src\data\SaveManager.obj: src\data\SaveManager.cpp.obj
+.PHONY : src\data\SaveManager.obj
 
 # target to build an object file
-src\game\enemy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.obj
-.PHONY : src\game\enemy.cpp.obj
+src\data\SaveManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.obj
+.PHONY : src\data\SaveManager.cpp.obj
 
-src\game\enemy.i: src\game\enemy.cpp.i
-.PHONY : src\game\enemy.i
+src\data\SaveManager.i: src\data\SaveManager.cpp.i
+.PHONY : src\data\SaveManager.i
 
 # target to preprocess a source file
-src\game\enemy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.i
-.PHONY : src\game\enemy.cpp.i
+src\data\SaveManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.i
+.PHONY : src\data\SaveManager.cpp.i
 
-src\game\enemy.s: src\game\enemy.cpp.s
-.PHONY : src\game\enemy.s
+src\data\SaveManager.s: src\data\SaveManager.cpp.s
+.PHONY : src\data\SaveManager.s
 
 # target to generate assembly for a file
-src\game\enemy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\enemy.cpp.s
-.PHONY : src\game\enemy.cpp.s
+src\data\SaveManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\SaveManager.cpp.s
+.PHONY : src\data\SaveManager.cpp.s
 
-src\game\gamecontroller.obj: src\game\gamecontroller.cpp.obj
-.PHONY : src\game\gamecontroller.obj
+src\data\SoundManager.obj: src\data\SoundManager.cpp.obj
+.PHONY : src\data\SoundManager.obj
 
 # target to build an object file
-src\game\gamecontroller.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.obj
-.PHONY : src\game\gamecontroller.cpp.obj
+src\data\SoundManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.obj
+.PHONY : src\data\SoundManager.cpp.obj
 
-src\game\gamecontroller.i: src\game\gamecontroller.cpp.i
-.PHONY : src\game\gamecontroller.i
+src\data\SoundManager.i: src\data\SoundManager.cpp.i
+.PHONY : src\data\SoundManager.i
 
 # target to preprocess a source file
-src\game\gamecontroller.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.i
-.PHONY : src\game\gamecontroller.cpp.i
+src\data\SoundManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.i
+.PHONY : src\data\SoundManager.cpp.i
 
-src\game\gamecontroller.s: src\game\gamecontroller.cpp.s
-.PHONY : src\game\gamecontroller.s
+src\data\SoundManager.s: src\data\SoundManager.cpp.s
+.PHONY : src\data\SoundManager.s
 
 # target to generate assembly for a file
-src\game\gamecontroller.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\gamecontroller.cpp.s
-.PHONY : src\game\gamecontroller.cpp.s
+src\data\SoundManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\data\SoundManager.cpp.s
+.PHONY : src\data\SoundManager.cpp.s
 
-src\game\tower.obj: src\game\tower.cpp.obj
-.PHONY : src\game\tower.obj
+src\entity\Bullet.obj: src\entity\Bullet.cpp.obj
+.PHONY : src\entity\Bullet.obj
 
 # target to build an object file
-src\game\tower.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.obj
-.PHONY : src\game\tower.cpp.obj
+src\entity\Bullet.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.obj
+.PHONY : src\entity\Bullet.cpp.obj
 
-src\game\tower.i: src\game\tower.cpp.i
-.PHONY : src\game\tower.i
+src\entity\Bullet.i: src\entity\Bullet.cpp.i
+.PHONY : src\entity\Bullet.i
 
 # target to preprocess a source file
-src\game\tower.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.i
-.PHONY : src\game\tower.cpp.i
+src\entity\Bullet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.i
+.PHONY : src\entity\Bullet.cpp.i
 
-src\game\tower.s: src\game\tower.cpp.s
-.PHONY : src\game\tower.s
+src\entity\Bullet.s: src\entity\Bullet.cpp.s
+.PHONY : src\entity\Bullet.s
 
 # target to generate assembly for a file
-src\game\tower.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\game\tower.cpp.s
-.PHONY : src\game\tower.cpp.s
+src\entity\Bullet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Bullet.cpp.s
+.PHONY : src\entity\Bullet.cpp.s
+
+src\entity\Castle.obj: src\entity\Castle.cpp.obj
+.PHONY : src\entity\Castle.obj
+
+# target to build an object file
+src\entity\Castle.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.obj
+.PHONY : src\entity\Castle.cpp.obj
+
+src\entity\Castle.i: src\entity\Castle.cpp.i
+.PHONY : src\entity\Castle.i
+
+# target to preprocess a source file
+src\entity\Castle.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.i
+.PHONY : src\entity\Castle.cpp.i
+
+src\entity\Castle.s: src\entity\Castle.cpp.s
+.PHONY : src\entity\Castle.s
+
+# target to generate assembly for a file
+src\entity\Castle.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Castle.cpp.s
+.PHONY : src\entity\Castle.cpp.s
+
+src\entity\Enemy.obj: src\entity\Enemy.cpp.obj
+.PHONY : src\entity\Enemy.obj
+
+# target to build an object file
+src\entity\Enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.obj
+.PHONY : src\entity\Enemy.cpp.obj
+
+src\entity\Enemy.i: src\entity\Enemy.cpp.i
+.PHONY : src\entity\Enemy.i
+
+# target to preprocess a source file
+src\entity\Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.i
+.PHONY : src\entity\Enemy.cpp.i
+
+src\entity\Enemy.s: src\entity\Enemy.cpp.s
+.PHONY : src\entity\Enemy.s
+
+# target to generate assembly for a file
+src\entity\Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Enemy.cpp.s
+.PHONY : src\entity\Enemy.cpp.s
+
+src\entity\Tower.obj: src\entity\Tower.cpp.obj
+.PHONY : src\entity\Tower.obj
+
+# target to build an object file
+src\entity\Tower.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.obj
+.PHONY : src\entity\Tower.cpp.obj
+
+src\entity\Tower.i: src\entity\Tower.cpp.i
+.PHONY : src\entity\Tower.i
+
+# target to preprocess a source file
+src\entity\Tower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.i
+.PHONY : src\entity\Tower.cpp.i
+
+src\entity\Tower.s: src\entity\Tower.cpp.s
+.PHONY : src\entity\Tower.s
+
+# target to generate assembly for a file
+src\entity\Tower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\entity\Tower.cpp.s
+.PHONY : src\entity\Tower.cpp.s
+
+src\level\LevelData.obj: src\level\LevelData.cpp.obj
+.PHONY : src\level\LevelData.obj
+
+# target to build an object file
+src\level\LevelData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.obj
+.PHONY : src\level\LevelData.cpp.obj
+
+src\level\LevelData.i: src\level\LevelData.cpp.i
+.PHONY : src\level\LevelData.i
+
+# target to preprocess a source file
+src\level\LevelData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.i
+.PHONY : src\level\LevelData.cpp.i
+
+src\level\LevelData.s: src\level\LevelData.cpp.s
+.PHONY : src\level\LevelData.s
+
+# target to generate assembly for a file
+src\level\LevelData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\level\LevelData.cpp.s
+.PHONY : src\level\LevelData.cpp.s
+
+src\level\LevelManager.obj: src\level\LevelManager.cpp.obj
+.PHONY : src\level\LevelManager.obj
+
+# target to build an object file
+src\level\LevelManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.obj
+.PHONY : src\level\LevelManager.cpp.obj
+
+src\level\LevelManager.i: src\level\LevelManager.cpp.i
+.PHONY : src\level\LevelManager.i
+
+# target to preprocess a source file
+src\level\LevelManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.i
+.PHONY : src\level\LevelManager.cpp.i
+
+src\level\LevelManager.s: src\level\LevelManager.cpp.s
+.PHONY : src\level\LevelManager.s
+
+# target to generate assembly for a file
+src\level\LevelManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\level\LevelManager.cpp.s
+.PHONY : src\level\LevelManager.cpp.s
 
 src\main.obj: src\main.cpp.obj
 .PHONY : src\main.obj
@@ -513,6 +633,54 @@ src\main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\main.cpp.s
 .PHONY : src\main.cpp.s
 
+src\map\GameMap.obj: src\map\GameMap.cpp.obj
+.PHONY : src\map\GameMap.obj
+
+# target to build an object file
+src\map\GameMap.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.obj
+.PHONY : src\map\GameMap.cpp.obj
+
+src\map\GameMap.i: src\map\GameMap.cpp.i
+.PHONY : src\map\GameMap.i
+
+# target to preprocess a source file
+src\map\GameMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.i
+.PHONY : src\map\GameMap.cpp.i
+
+src\map\GameMap.s: src\map\GameMap.cpp.s
+.PHONY : src\map\GameMap.s
+
+# target to generate assembly for a file
+src\map\GameMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\map\GameMap.cpp.s
+.PHONY : src\map\GameMap.cpp.s
+
+src\scene\GameScene.obj: src\scene\GameScene.cpp.obj
+.PHONY : src\scene\GameScene.obj
+
+# target to build an object file
+src\scene\GameScene.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.obj
+.PHONY : src\scene\GameScene.cpp.obj
+
+src\scene\GameScene.i: src\scene\GameScene.cpp.i
+.PHONY : src\scene\GameScene.i
+
+# target to preprocess a source file
+src\scene\GameScene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.i
+.PHONY : src\scene\GameScene.cpp.i
+
+src\scene\GameScene.s: src\scene\GameScene.cpp.s
+.PHONY : src\scene\GameScene.s
+
+# target to generate assembly for a file
+src\scene\GameScene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\scene\GameScene.cpp.s
+.PHONY : src\scene\GameScene.cpp.s
+
 src\ui\Mainwindow.obj: src\ui\Mainwindow.cpp.obj
 .PHONY : src\ui\Mainwindow.obj
 
@@ -537,6 +705,174 @@ src\ui\Mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\Mainwindow.cpp.s
 .PHONY : src\ui\Mainwindow.cpp.s
 
+src\ui\pages\GamePage.obj: src\ui\pages\GamePage.cpp.obj
+.PHONY : src\ui\pages\GamePage.obj
+
+# target to build an object file
+src\ui\pages\GamePage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.obj
+.PHONY : src\ui\pages\GamePage.cpp.obj
+
+src\ui\pages\GamePage.i: src\ui\pages\GamePage.cpp.i
+.PHONY : src\ui\pages\GamePage.i
+
+# target to preprocess a source file
+src\ui\pages\GamePage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.i
+.PHONY : src\ui\pages\GamePage.cpp.i
+
+src\ui\pages\GamePage.s: src\ui\pages\GamePage.cpp.s
+.PHONY : src\ui\pages\GamePage.s
+
+# target to generate assembly for a file
+src\ui\pages\GamePage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\GamePage.cpp.s
+.PHONY : src\ui\pages\GamePage.cpp.s
+
+src\ui\pages\LevelSelectPage.obj: src\ui\pages\LevelSelectPage.cpp.obj
+.PHONY : src\ui\pages\LevelSelectPage.obj
+
+# target to build an object file
+src\ui\pages\LevelSelectPage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.obj
+.PHONY : src\ui\pages\LevelSelectPage.cpp.obj
+
+src\ui\pages\LevelSelectPage.i: src\ui\pages\LevelSelectPage.cpp.i
+.PHONY : src\ui\pages\LevelSelectPage.i
+
+# target to preprocess a source file
+src\ui\pages\LevelSelectPage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.i
+.PHONY : src\ui\pages\LevelSelectPage.cpp.i
+
+src\ui\pages\LevelSelectPage.s: src\ui\pages\LevelSelectPage.cpp.s
+.PHONY : src\ui\pages\LevelSelectPage.s
+
+# target to generate assembly for a file
+src\ui\pages\LevelSelectPage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\LevelSelectPage.cpp.s
+.PHONY : src\ui\pages\LevelSelectPage.cpp.s
+
+src\ui\pages\ResultPage.obj: src\ui\pages\ResultPage.cpp.obj
+.PHONY : src\ui\pages\ResultPage.obj
+
+# target to build an object file
+src\ui\pages\ResultPage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.obj
+.PHONY : src\ui\pages\ResultPage.cpp.obj
+
+src\ui\pages\ResultPage.i: src\ui\pages\ResultPage.cpp.i
+.PHONY : src\ui\pages\ResultPage.i
+
+# target to preprocess a source file
+src\ui\pages\ResultPage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.i
+.PHONY : src\ui\pages\ResultPage.cpp.i
+
+src\ui\pages\ResultPage.s: src\ui\pages\ResultPage.cpp.s
+.PHONY : src\ui\pages\ResultPage.s
+
+# target to generate assembly for a file
+src\ui\pages\ResultPage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\ResultPage.cpp.s
+.PHONY : src\ui\pages\ResultPage.cpp.s
+
+src\ui\pages\StartPage.obj: src\ui\pages\StartPage.cpp.obj
+.PHONY : src\ui\pages\StartPage.obj
+
+# target to build an object file
+src\ui\pages\StartPage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.obj
+.PHONY : src\ui\pages\StartPage.cpp.obj
+
+src\ui\pages\StartPage.i: src\ui\pages\StartPage.cpp.i
+.PHONY : src\ui\pages\StartPage.i
+
+# target to preprocess a source file
+src\ui\pages\StartPage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.i
+.PHONY : src\ui\pages\StartPage.cpp.i
+
+src\ui\pages\StartPage.s: src\ui\pages\StartPage.cpp.s
+.PHONY : src\ui\pages\StartPage.s
+
+# target to generate assembly for a file
+src\ui\pages\StartPage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\pages\StartPage.cpp.s
+.PHONY : src\ui\pages\StartPage.cpp.s
+
+src\ui\widgets\CardSelectWidget.obj: src\ui\widgets\CardSelectWidget.cpp.obj
+.PHONY : src\ui\widgets\CardSelectWidget.obj
+
+# target to build an object file
+src\ui\widgets\CardSelectWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.obj
+.PHONY : src\ui\widgets\CardSelectWidget.cpp.obj
+
+src\ui\widgets\CardSelectWidget.i: src\ui\widgets\CardSelectWidget.cpp.i
+.PHONY : src\ui\widgets\CardSelectWidget.i
+
+# target to preprocess a source file
+src\ui\widgets\CardSelectWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.i
+.PHONY : src\ui\widgets\CardSelectWidget.cpp.i
+
+src\ui\widgets\CardSelectWidget.s: src\ui\widgets\CardSelectWidget.cpp.s
+.PHONY : src\ui\widgets\CardSelectWidget.s
+
+# target to generate assembly for a file
+src\ui\widgets\CardSelectWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\CardSelectWidget.cpp.s
+.PHONY : src\ui\widgets\CardSelectWidget.cpp.s
+
+src\ui\widgets\HUDWidget.obj: src\ui\widgets\HUDWidget.cpp.obj
+.PHONY : src\ui\widgets\HUDWidget.obj
+
+# target to build an object file
+src\ui\widgets\HUDWidget.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.obj
+.PHONY : src\ui\widgets\HUDWidget.cpp.obj
+
+src\ui\widgets\HUDWidget.i: src\ui\widgets\HUDWidget.cpp.i
+.PHONY : src\ui\widgets\HUDWidget.i
+
+# target to preprocess a source file
+src\ui\widgets\HUDWidget.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.i
+.PHONY : src\ui\widgets\HUDWidget.cpp.i
+
+src\ui\widgets\HUDWidget.s: src\ui\widgets\HUDWidget.cpp.s
+.PHONY : src\ui\widgets\HUDWidget.s
+
+# target to generate assembly for a file
+src\ui\widgets\HUDWidget.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\HUDWidget.cpp.s
+.PHONY : src\ui\widgets\HUDWidget.cpp.s
+
+src\ui\widgets\PauseOverlay.obj: src\ui\widgets\PauseOverlay.cpp.obj
+.PHONY : src\ui\widgets\PauseOverlay.obj
+
+# target to build an object file
+src\ui\widgets\PauseOverlay.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.obj
+.PHONY : src\ui\widgets\PauseOverlay.cpp.obj
+
+src\ui\widgets\PauseOverlay.i: src\ui\widgets\PauseOverlay.cpp.i
+.PHONY : src\ui\widgets\PauseOverlay.i
+
+# target to preprocess a source file
+src\ui\widgets\PauseOverlay.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.i
+.PHONY : src\ui\widgets\PauseOverlay.cpp.i
+
+src\ui\widgets\PauseOverlay.s: src\ui\widgets\PauseOverlay.cpp.s
+.PHONY : src\ui\widgets\PauseOverlay.s
+
+# target to generate assembly for a file
+src\ui\widgets\PauseOverlay.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TheLastKeep.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\TheLastKeep.dir\src\ui\widgets\PauseOverlay.cpp.s
+.PHONY : src\ui\widgets\PauseOverlay.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -557,45 +893,87 @@ help:
 	@echo ... build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/.qt/rcc/qrc_game_resources.obj
 	@echo ... build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/.qt/rcc/qrc_game_resources.i
 	@echo ... build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/.qt/rcc/qrc_game_resources.s
-	@echo ... src/game/GameMap.obj
-	@echo ... src/game/GameMap.i
-	@echo ... src/game/GameMap.s
-	@echo ... src/game/GameScene.obj
-	@echo ... src/game/GameScene.i
-	@echo ... src/game/GameScene.s
-	@echo ... src/game/LevelData.obj
-	@echo ... src/game/LevelData.i
-	@echo ... src/game/LevelData.s
-	@echo ... src/game/LevelManager.obj
-	@echo ... src/game/LevelManager.i
-	@echo ... src/game/LevelManager.s
-	@echo ... src/game/bullet.obj
-	@echo ... src/game/bullet.i
-	@echo ... src/game/bullet.s
-	@echo ... src/game/card.obj
-	@echo ... src/game/card.i
-	@echo ... src/game/card.s
-	@echo ... src/game/cardmanager.obj
-	@echo ... src/game/cardmanager.i
-	@echo ... src/game/cardmanager.s
-	@echo ... src/game/castle.obj
-	@echo ... src/game/castle.i
-	@echo ... src/game/castle.s
-	@echo ... src/game/enemy.obj
-	@echo ... src/game/enemy.i
-	@echo ... src/game/enemy.s
-	@echo ... src/game/gamecontroller.obj
-	@echo ... src/game/gamecontroller.i
-	@echo ... src/game/gamecontroller.s
-	@echo ... src/game/tower.obj
-	@echo ... src/game/tower.i
-	@echo ... src/game/tower.s
+	@echo ... src/card/Card.obj
+	@echo ... src/card/Card.i
+	@echo ... src/card/Card.s
+	@echo ... src/card/CardManager.obj
+	@echo ... src/card/CardManager.i
+	@echo ... src/card/CardManager.s
+	@echo ... src/core/BattleSystem.obj
+	@echo ... src/core/BattleSystem.i
+	@echo ... src/core/BattleSystem.s
+	@echo ... src/core/CollisionSystem.obj
+	@echo ... src/core/CollisionSystem.i
+	@echo ... src/core/CollisionSystem.s
+	@echo ... src/core/GameController.obj
+	@echo ... src/core/GameController.i
+	@echo ... src/core/GameController.s
+	@echo ... src/core/StateManager.obj
+	@echo ... src/core/StateManager.i
+	@echo ... src/core/StateManager.s
+	@echo ... src/data/ConfigManager.obj
+	@echo ... src/data/ConfigManager.i
+	@echo ... src/data/ConfigManager.s
+	@echo ... src/data/ResourceManager.obj
+	@echo ... src/data/ResourceManager.i
+	@echo ... src/data/ResourceManager.s
+	@echo ... src/data/SaveManager.obj
+	@echo ... src/data/SaveManager.i
+	@echo ... src/data/SaveManager.s
+	@echo ... src/data/SoundManager.obj
+	@echo ... src/data/SoundManager.i
+	@echo ... src/data/SoundManager.s
+	@echo ... src/entity/Bullet.obj
+	@echo ... src/entity/Bullet.i
+	@echo ... src/entity/Bullet.s
+	@echo ... src/entity/Castle.obj
+	@echo ... src/entity/Castle.i
+	@echo ... src/entity/Castle.s
+	@echo ... src/entity/Enemy.obj
+	@echo ... src/entity/Enemy.i
+	@echo ... src/entity/Enemy.s
+	@echo ... src/entity/Tower.obj
+	@echo ... src/entity/Tower.i
+	@echo ... src/entity/Tower.s
+	@echo ... src/level/LevelData.obj
+	@echo ... src/level/LevelData.i
+	@echo ... src/level/LevelData.s
+	@echo ... src/level/LevelManager.obj
+	@echo ... src/level/LevelManager.i
+	@echo ... src/level/LevelManager.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/map/GameMap.obj
+	@echo ... src/map/GameMap.i
+	@echo ... src/map/GameMap.s
+	@echo ... src/scene/GameScene.obj
+	@echo ... src/scene/GameScene.i
+	@echo ... src/scene/GameScene.s
 	@echo ... src/ui/Mainwindow.obj
 	@echo ... src/ui/Mainwindow.i
 	@echo ... src/ui/Mainwindow.s
+	@echo ... src/ui/pages/GamePage.obj
+	@echo ... src/ui/pages/GamePage.i
+	@echo ... src/ui/pages/GamePage.s
+	@echo ... src/ui/pages/LevelSelectPage.obj
+	@echo ... src/ui/pages/LevelSelectPage.i
+	@echo ... src/ui/pages/LevelSelectPage.s
+	@echo ... src/ui/pages/ResultPage.obj
+	@echo ... src/ui/pages/ResultPage.i
+	@echo ... src/ui/pages/ResultPage.s
+	@echo ... src/ui/pages/StartPage.obj
+	@echo ... src/ui/pages/StartPage.i
+	@echo ... src/ui/pages/StartPage.s
+	@echo ... src/ui/widgets/CardSelectWidget.obj
+	@echo ... src/ui/widgets/CardSelectWidget.i
+	@echo ... src/ui/widgets/CardSelectWidget.s
+	@echo ... src/ui/widgets/HUDWidget.obj
+	@echo ... src/ui/widgets/HUDWidget.i
+	@echo ... src/ui/widgets/HUDWidget.s
+	@echo ... src/ui/widgets/PauseOverlay.obj
+	@echo ... src/ui/widgets/PauseOverlay.i
+	@echo ... src/ui/widgets/PauseOverlay.s
 .PHONY : help
 
 

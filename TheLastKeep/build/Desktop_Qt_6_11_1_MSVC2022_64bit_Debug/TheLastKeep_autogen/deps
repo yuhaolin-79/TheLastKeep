@@ -14,7 +14,6 @@ TheLastKeep_autogen/timestamp: \
 	C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/stdio.h \
 	C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/stdlib.h \
 	C:/Program\ Files\ (x86)/Windows\ Kits/10/Include/10.0.26100.0/ucrt/string.h \
-	C:/Qt/6.11.1/msvc2022_64/include/QtCore/QAbstractItemModel \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/QObject \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/QPoint \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/QPointF \
@@ -29,7 +28,6 @@ TheLastKeep_autogen/timestamp: \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/q20utility.h \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/q23type_traits.h \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/q23utility.h \
-	C:/Qt/6.11.1/msvc2022_64/include/QtCore/qabstractitemmodel.h \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/qalgorithms.h \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/qalloc.h \
 	C:/Qt/6.11.1/msvc2022_64/include/QtCore/qanystringview.h \
@@ -415,31 +413,63 @@ TheLastKeep_autogen/timestamp: \
 	E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
-	E:/TheLastKeep/TheLastKeep/src/game/GameMap.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/GameMap.h \
-	E:/TheLastKeep/TheLastKeep/src/game/GameScene.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/GameScene.h \
-	E:/TheLastKeep/TheLastKeep/src/game/LevelData.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/LevelData.h \
-	E:/TheLastKeep/TheLastKeep/src/game/LevelManager.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/LevelManager.h \
-	E:/TheLastKeep/TheLastKeep/src/game/bullet.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/bullet.h \
-	E:/TheLastKeep/TheLastKeep/src/game/card.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/card.h \
-	E:/TheLastKeep/TheLastKeep/src/game/cardmanager.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/cardmanager.h \
-	E:/TheLastKeep/TheLastKeep/src/game/castle.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/castle.h \
-	E:/TheLastKeep/TheLastKeep/src/game/enemy.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/enemy.h \
-	E:/TheLastKeep/TheLastKeep/src/game/gamecontroller.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/gamecontroller.h \
-	E:/TheLastKeep/TheLastKeep/src/game/tower.cpp \
-	E:/TheLastKeep/TheLastKeep/src/game/tower.h \
+	E:/TheLastKeep/TheLastKeep/src/card/Card.cpp \
+	E:/TheLastKeep/TheLastKeep/src/card/Card.h \
+	E:/TheLastKeep/TheLastKeep/src/card/CardManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/card/CardManager.h \
+	E:/TheLastKeep/TheLastKeep/src/common/GameConstants.h \
+	E:/TheLastKeep/TheLastKeep/src/common/GameTypes.h \
+	E:/TheLastKeep/TheLastKeep/src/common/Result.h \
+	E:/TheLastKeep/TheLastKeep/src/core/BattleSystem.cpp \
+	E:/TheLastKeep/TheLastKeep/src/core/BattleSystem.h \
+	E:/TheLastKeep/TheLastKeep/src/core/CollisionSystem.cpp \
+	E:/TheLastKeep/TheLastKeep/src/core/CollisionSystem.h \
+	E:/TheLastKeep/TheLastKeep/src/core/GameController.cpp \
+	E:/TheLastKeep/TheLastKeep/src/core/GameController.h \
+	E:/TheLastKeep/TheLastKeep/src/core/StateManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/core/StateManager.h \
+	E:/TheLastKeep/TheLastKeep/src/data/ConfigManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/data/ConfigManager.h \
+	E:/TheLastKeep/TheLastKeep/src/data/ResourceManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/data/ResourceManager.h \
+	E:/TheLastKeep/TheLastKeep/src/data/SaveManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/data/SaveManager.h \
+	E:/TheLastKeep/TheLastKeep/src/data/SoundManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/data/SoundManager.h \
+	E:/TheLastKeep/TheLastKeep/src/entity/Bullet.cpp \
+	E:/TheLastKeep/TheLastKeep/src/entity/Bullet.h \
+	E:/TheLastKeep/TheLastKeep/src/entity/Castle.cpp \
+	E:/TheLastKeep/TheLastKeep/src/entity/Castle.h \
+	E:/TheLastKeep/TheLastKeep/src/entity/Enemy.cpp \
+	E:/TheLastKeep/TheLastKeep/src/entity/Enemy.h \
+	E:/TheLastKeep/TheLastKeep/src/entity/Tower.cpp \
+	E:/TheLastKeep/TheLastKeep/src/entity/Tower.h \
+	E:/TheLastKeep/TheLastKeep/src/level/LevelData.cpp \
+	E:/TheLastKeep/TheLastKeep/src/level/LevelData.h \
+	E:/TheLastKeep/TheLastKeep/src/level/LevelManager.cpp \
+	E:/TheLastKeep/TheLastKeep/src/level/LevelManager.h \
 	E:/TheLastKeep/TheLastKeep/src/main.cpp \
+	E:/TheLastKeep/TheLastKeep/src/map/GameMap.cpp \
+	E:/TheLastKeep/TheLastKeep/src/map/GameMap.h \
+	E:/TheLastKeep/TheLastKeep/src/map/Tile.h \
+	E:/TheLastKeep/TheLastKeep/src/scene/GameScene.cpp \
+	E:/TheLastKeep/TheLastKeep/src/scene/GameScene.h \
 	E:/TheLastKeep/TheLastKeep/src/ui/Mainwindow.cpp \
 	E:/TheLastKeep/TheLastKeep/src/ui/Mainwindow.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/GamePage.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/GamePage.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/LevelSelectPage.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/LevelSelectPage.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/ResultPage.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/ResultPage.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/StartPage.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/pages/StartPage.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/widgets/CardSelectWidget.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/widgets/CardSelectWidget.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/widgets/HUDWidget.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/widgets/HUDWidget.h \
+	E:/TheLastKeep/TheLastKeep/src/ui/widgets/PauseOverlay.cpp \
+	E:/TheLastKeep/TheLastKeep/src/ui/widgets/PauseOverlay.h \
 	E:/Visual\ Studio/VC/Tools/MSVC/14.44.35207/include/algorithm \
 	E:/Visual\ Studio/VC/Tools/MSVC/14.44.35207/include/array \
 	E:/Visual\ Studio/VC/Tools/MSVC/14.44.35207/include/atomic \

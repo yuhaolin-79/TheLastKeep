@@ -358,75 +358,183 @@
 	"HEADERS" : 
 	[
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/GameMap.h",
+			"E:/TheLastKeep/TheLastKeep/src/card/Card.h",
 			"MU",
-			"L256WXPHEP/moc_GameMap.cpp",
+			"FIHWQYJFIY/moc_Card.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/GameScene.h",
+			"E:/TheLastKeep/TheLastKeep/src/card/CardManager.h",
 			"MU",
-			"L256WXPHEP/moc_GameScene.cpp",
+			"FIHWQYJFIY/moc_CardManager.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/LevelData.h",
+			"E:/TheLastKeep/TheLastKeep/src/common/GameConstants.h",
 			"MU",
-			"L256WXPHEP/moc_LevelData.cpp",
+			"2PZEZPHIBF/moc_GameConstants.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/LevelManager.h",
+			"E:/TheLastKeep/TheLastKeep/src/common/GameTypes.h",
 			"MU",
-			"L256WXPHEP/moc_LevelManager.cpp",
+			"2PZEZPHIBF/moc_GameTypes.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/bullet.h",
+			"E:/TheLastKeep/TheLastKeep/src/common/Result.h",
 			"MU",
-			"L256WXPHEP/moc_bullet.cpp",
+			"2PZEZPHIBF/moc_Result.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/card.h",
+			"E:/TheLastKeep/TheLastKeep/src/core/BattleSystem.h",
 			"MU",
-			"L256WXPHEP/moc_card.cpp",
+			"PRMOGMWJPH/moc_BattleSystem.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/cardmanager.h",
+			"E:/TheLastKeep/TheLastKeep/src/core/CollisionSystem.h",
 			"MU",
-			"L256WXPHEP/moc_cardmanager.cpp",
+			"PRMOGMWJPH/moc_CollisionSystem.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/castle.h",
+			"E:/TheLastKeep/TheLastKeep/src/core/GameController.h",
 			"MU",
-			"L256WXPHEP/moc_castle.cpp",
+			"PRMOGMWJPH/moc_GameController.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/enemy.h",
+			"E:/TheLastKeep/TheLastKeep/src/core/StateManager.h",
 			"MU",
-			"L256WXPHEP/moc_enemy.cpp",
+			"PRMOGMWJPH/moc_StateManager.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/gamecontroller.h",
+			"E:/TheLastKeep/TheLastKeep/src/data/ConfigManager.h",
 			"MU",
-			"L256WXPHEP/moc_gamecontroller.cpp",
+			"SG3YC7EIDC/moc_ConfigManager.cpp",
 			null
 		],
 		[
-			"E:/TheLastKeep/TheLastKeep/src/game/tower.h",
+			"E:/TheLastKeep/TheLastKeep/src/data/ResourceManager.h",
 			"MU",
-			"L256WXPHEP/moc_tower.cpp",
+			"SG3YC7EIDC/moc_ResourceManager.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/data/SaveManager.h",
+			"MU",
+			"SG3YC7EIDC/moc_SaveManager.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/data/SoundManager.h",
+			"MU",
+			"SG3YC7EIDC/moc_SoundManager.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/entity/Bullet.h",
+			"MU",
+			"GH2DYT6SNJ/moc_Bullet.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/entity/Castle.h",
+			"MU",
+			"GH2DYT6SNJ/moc_Castle.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/entity/Enemy.h",
+			"MU",
+			"GH2DYT6SNJ/moc_Enemy.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/entity/Tower.h",
+			"MU",
+			"GH2DYT6SNJ/moc_Tower.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/level/LevelData.h",
+			"MU",
+			"LQ3JD7IEJN/moc_LevelData.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/level/LevelManager.h",
+			"MU",
+			"LQ3JD7IEJN/moc_LevelManager.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/map/GameMap.h",
+			"MU",
+			"GVBWGARL6Y/moc_GameMap.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/map/Tile.h",
+			"MU",
+			"GVBWGARL6Y/moc_Tile.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/scene/GameScene.h",
+			"MU",
+			"VNXV6E7L7G/moc_GameScene.cpp",
 			null
 		],
 		[
 			"E:/TheLastKeep/TheLastKeep/src/ui/Mainwindow.h",
 			"MU",
 			"YPKJ5OE7LN/moc_Mainwindow.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/pages/GamePage.h",
+			"MU",
+			"4PIRG7OLBM/moc_GamePage.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/pages/LevelSelectPage.h",
+			"MU",
+			"4PIRG7OLBM/moc_LevelSelectPage.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/pages/ResultPage.h",
+			"MU",
+			"4PIRG7OLBM/moc_ResultPage.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/pages/StartPage.h",
+			"MU",
+			"4PIRG7OLBM/moc_StartPage.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/widgets/CardSelectWidget.h",
+			"MU",
+			"JCA2YNWUYB/moc_CardSelectWidget.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/widgets/HUDWidget.h",
+			"MU",
+			"JCA2YNWUYB/moc_HUDWidget.cpp",
+			null
+		],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/widgets/PauseOverlay.h",
+			"MU",
+			"JCA2YNWUYB/moc_PauseOverlay.cpp",
 			null
 		]
 	],
@@ -490,19 +598,45 @@
 	"SETTINGS_FILE" : "E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/CMakeFiles/TheLastKeep_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "E:/TheLastKeep/TheLastKeep/src/game/GameMap.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/GameScene.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/LevelData.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/LevelManager.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/bullet.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/card.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/cardmanager.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/castle.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/enemy.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/gamecontroller.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/game/tower.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/card/Card.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/card/CardManager.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/core/BattleSystem.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/core/CollisionSystem.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/core/GameController.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/core/StateManager.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/data/ConfigManager.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/data/ResourceManager.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/data/SaveManager.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/data/SoundManager.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/entity/Bullet.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/entity/Castle.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/entity/Enemy.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/entity/Tower.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/level/LevelData.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/level/LevelManager.cpp", "MU", null ],
 		[ "E:/TheLastKeep/TheLastKeep/src/main.cpp", "MU", null ],
-		[ "E:/TheLastKeep/TheLastKeep/src/ui/Mainwindow.cpp", "MU", null ]
+		[ "E:/TheLastKeep/TheLastKeep/src/map/GameMap.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/scene/GameScene.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/ui/Mainwindow.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/ui/pages/GamePage.cpp", "MU", null ],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/pages/LevelSelectPage.cpp",
+			"MU",
+			null
+		],
+		[ "E:/TheLastKeep/TheLastKeep/src/ui/pages/ResultPage.cpp", "MU", null ],
+		[ "E:/TheLastKeep/TheLastKeep/src/ui/pages/StartPage.cpp", "MU", null ],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/widgets/CardSelectWidget.cpp",
+			"MU",
+			null
+		],
+		[ "E:/TheLastKeep/TheLastKeep/src/ui/widgets/HUDWidget.cpp", "MU", null ],
+		[
+			"E:/TheLastKeep/TheLastKeep/src/ui/widgets/PauseOverlay.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

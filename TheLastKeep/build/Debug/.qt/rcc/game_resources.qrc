@@ -1,7 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="images/background.png">E:/TheLastKeep/TheLastKeep/resources/images/background.png</file>
-    <file alias="images/tutorialLevelMap.png">E:/TheLastKeep/TheLastKeep/resources/images/tutorialLevelMap.png</file>
-  </qresource>
-</RCC>
-

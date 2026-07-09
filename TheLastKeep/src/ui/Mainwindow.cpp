@@ -1,11 +1,22 @@
+/* 目录 src/ui/Mainwindow.h
+ * 功能 主窗口 只负责页面切换，严禁写入其他逻辑
+ */
+
+
 #include "ui/mainwindow.h"
 
 #include <QFrame>
 #include <QGraphicsView>
+
+
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QLabel>
 #include <QPainter>
 #include <QDebug>
+#include <QStackedWidget>
 
-#include "game/GameScene.h"
+#include "scene/GameScene.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -13,6 +24,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     setWindowTitle("The Last Keep");
     resize(1280, 720); //v0.1的分辨率 @fish
+
+    // stackedWidget = new QStackedWidget(this);
+
 
     m_scene = new GameScene(this); // 创建游戏场景，父对象为MainWindow
 
@@ -26,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     setCentralWidget(m_view); // 把QGraphicsView设置为主窗口中央区域，窗口显示游戏场景
 
     // ========== 绑定场景按钮信号到窗口槽函数 ==========
-    connect(m_scene, &GameScene::sigStartGame, this, &MainWindow::onStartGame);
+    connect(m_scene, &GameScene::sigStartGame, this, &MainWindow::onStartGame, Qt::QueuedConnection);
     connect(m_scene, &GameScene::sigQuitGame, this, &MainWindow::onQuitGame);
 }
 
