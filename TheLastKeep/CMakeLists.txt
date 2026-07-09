@@ -13,13 +13,27 @@ qt_add_executable(TheLastKeep
 
     src/game/GameScene.h
     src/game/GameScene.cpp
-    # resources/resources.qrc
     src/game/GameMap.h
     src/game/GameMap.cpp
     src/game/LevelData.h
     src/game/LevelData.cpp
     src/game/LevelManager.h
     src/game/LevelManager.cpp
+
+    src/game/enemy.h
+    src/game/enemy.cpp
+    src/game/tower.h
+    src/game/tower.cpp
+    src/game/bullet.h
+    src/game/bullet.cpp
+    src/game/castle.h
+    src/game/castle.cpp
+    src/game/gamecontroller.h
+    src/game/gamecontroller.cpp
+    src/game/card.h
+    src/game/card.cpp
+    src/game/cardmanager.h
+    src/game/cardmanager.cpp
 )
 
 qt_add_resources(TheLastKeep "game_resources"
