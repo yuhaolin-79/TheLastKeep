@@ -8,32 +8,74 @@ qt_standard_project_setup()
 qt_add_executable(TheLastKeep
     WIN32 MACOSX_BUNDLE
     src/main.cpp
-    src/ui/Mainwindow.h
-    src/ui/Mainwindow.cpp
 
-    src/game/GameScene.h
-    src/game/GameScene.cpp
-    src/game/GameMap.h
-    src/game/GameMap.cpp
-    src/game/LevelData.h
-    src/game/LevelData.cpp
-    src/game/LevelManager.h
-    src/game/LevelManager.cpp
+    src/common/GameTypes.h
+    src/common/GameConstants.h
+    src/common/Result.h
 
-    src/game/enemy.h
-    src/game/enemy.cpp
-    src/game/tower.h
-    src/game/tower.cpp
-    src/game/bullet.h
-    src/game/bullet.cpp
-    src/game/castle.h
-    src/game/castle.cpp
-    src/game/gamecontroller.h
-    src/game/gamecontroller.cpp
-    src/game/card.h
-    src/game/card.cpp
-    src/game/cardmanager.h
-    src/game/cardmanager.cpp
+    src/ui/MainWindow.h
+    src/ui/MainWindow.cpp
+
+    src/ui/pages/StartPage.h
+    src/ui/pages/StartPage.cpp
+    src/ui/pages/LevelSelectPage.h
+    src/ui/pages/LevelSelectPage.cpp
+    src/ui/pages/GamePage.h
+    src/ui/pages/GamePage.cpp
+    src/ui/pages/ResultPage.h
+    src/ui/pages/ResultPage.cpp
+
+    src/ui/widgets/HUDWidget.h
+    src/ui/widgets/HUDWidget.cpp
+    src/ui/widgets/CardSelectWidget.h
+    src/ui/widgets/CardSelectWidget.cpp
+    src/ui/widgets/PauseOverlay.h
+    src/ui/widgets/PauseOverlay.cpp
+
+    src/scene/GameScene.h
+    src/scene/GameScene.cpp
+
+    src/core/GameController.h
+    src/core/GameController.cpp
+    src/core/StateManager.h
+    src/core/StateManager.cpp
+    src/core/BattleSystem.h
+    src/core/BattleSystem.cpp
+    src/core/CollisionSystem.h
+    src/core/CollisionSystem.cpp
+
+    src/map/GameMap.h
+    src/map/GameMap.cpp
+    src/map/Tile.h
+
+    src/level/LevelData.h
+    src/level/LevelData.cpp
+    src/level/LevelManager.h
+    src/level/LevelManager.cpp
+
+    src/entity/Enemy.h
+    src/entity/Enemy.cpp
+    src/entity/Tower.h
+    src/entity/Tower.cpp
+    src/entity/Bullet.h
+    src/entity/Bullet.cpp
+    src/entity/Castle.h
+    src/entity/Castle.cpp
+
+    src/card/Card.h
+    src/card/Card.cpp
+    src/card/CardManager.h
+    src/card/CardManager.cpp
+
+    src/data/ResourceManager.h
+    src/data/ResourceManager.cpp
+    src/data/ConfigManager.h
+    src/data/ConfigManager.cpp
+    src/data/SaveManager.h
+    src/data/SaveManager.cpp
+    src/data/SoundManager.h
+    src/data/SoundManager.cpp
+
 )
 
 qt_add_resources(TheLastKeep "game_resources"
