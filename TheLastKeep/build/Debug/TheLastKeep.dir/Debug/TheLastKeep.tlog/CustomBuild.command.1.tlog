@@ -1,0 +1,20 @@
+^E:\THELASTKEEP\THELASTKEEP\BUILD\DEBUG\CMAKEFILES\7E3016FBFFB10C856226F5EBE3371F1A\QRC_GAME_RESOURCES.CPP.RULE
+setlocal
+C:\Qt\6.11.1\msvc2022_64\bin\rcc.exe --output E:/TheLastKeep/TheLastKeep/build/Debug/.qt/rcc/qrc_game_resources.cpp --name game_resources E:/TheLastKeep/TheLastKeep/build/Debug/.qt/rcc/game_resources.qrc --no-zstd
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^E:\THELASTKEEP\THELASTKEEP\CMAKELISTS.TXT
+setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SE:/TheLastKeep/TheLastKeep -BE:/TheLastKeep/TheLastKeep/build/Debug --check-stamp-file E:/TheLastKeep/TheLastKeep/build/Debug/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
