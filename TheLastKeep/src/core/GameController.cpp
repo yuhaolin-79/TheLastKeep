@@ -11,7 +11,8 @@ GameController::GameController(QObject *parent)
     : QObject(parent),
     m_castleMaxHp(1000),   // 城堡初始总血量1000
     m_castleCurrentHp(1000),
-    m_gold(200)            // 开局金币200
+    m_gold(200),// 开局金币200
+    m_cardMgr(this)
 {
 
 }
@@ -31,28 +32,57 @@ int GameController::castleHp() const
     return m_castleCurrentHp;
 }
 
-// 增加金币（击杀敌人触发）
+// 增加金币（击杀敌人触发,叠加金币Buff倍率）
 void GameController::addGold(int num)
 {
-    if (num > 0)
-        m_gold += num;
+    if (num > 0){
+        BuffState buff = m_cardMgr.getCurrentBuff();
+        int finalGold = static_cast<int>(num*buff.goldRewardRate);
+        m_gold+=finalGold;
+    }
 }
 
-// 消耗金币（建造塔触发）
+// 消耗金币（建造塔触发,叠加造价降价Buff）
 void GameController::spendGold(int num)
 {
-    if (num > 0 && m_gold >= num)
-        m_gold -= num;
+    if (num > 0){
+        BuffState buff = m_cardMgr.getCurrentBuff();
+        int finalCost = static_cast<int>(num*buff.buildCostRate);
+        if(m_gold >= finalCost)
+            m_gold -= finalCost;
+    }
+
 }
 
 // 判断金币是否足够建造塔
 bool GameController::canBuildTower(int cost) const
 {
-    return m_gold >= cost;
+    BuffState buff = m_cardMgr.getCurrentBuff();
+    int finalCost = static_cast<int>(cost * buff.buildCostRate);
+    return m_gold >= finalCost;
 }
 
 // 获取当前金币
 int GameController::getGold() const
 {
     return m_gold;
+}
+
+//卡牌接口实现
+QVector<CardInfo> GameController::waveFinishShowCard(){
+    return m_cardMgr.randomGenThreeCards();
+}
+
+void GameController::selectBuffCard(CardType type){
+    m_cardMgr.selectOneCard(type);
+}
+
+BuffState GameController::getGlobalBuff()const{
+    return m_cardMgr.getCurrentBuff();
+}
+
+void GameController::gameRestartReset(){
+    m_castleCurrentHp = m_castleMaxHp;
+    m_gold = 200;
+    m_cardMgr.resetAllBuff();
 }

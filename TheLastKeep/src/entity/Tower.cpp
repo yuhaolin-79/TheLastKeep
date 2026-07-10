@@ -12,6 +12,7 @@
 #include "core/GameController.h"
 #include <QPixmap>
 #include <QLineF>
+#include"card/Card.h"
 
 Tower::Tower(TowerType type, QPointF pos, GameController *ctrl)
     : QGraphicsPixmapItem(nullptr),
@@ -67,33 +68,34 @@ void Tower::initTowerAttr(TowerType type)
 
 Bullet* Tower::updateAttack(const QList<Enemy *> &enemyList)
 {
-    qint64 now = QDateTime::currentMSecsSinceEpoch();
-    if (now - m_lastAttackTime < m_attackInterval)
+    qint64 now=QDateTime::currentMSecsSinceEpoch();
+    if (now-m_lastAttackTime<m_attackInterval)
         return nullptr;
 
-    Enemy* target = findTarget(enemyList);
+    Enemy* target=findTarget(enemyList);
     if (!target)
         return nullptr;
 
-    m_lastAttackTime = now;
+    m_lastAttackTime=now;
     return createBullet(target);
 }
 
 Enemy* Tower::findTarget(const QList<Enemy *> &enemyList)
 {
-    Enemy* nearest = nullptr;
-    qreal minDis = m_attackRange;
+    Enemy* nearest=nullptr;
+    float realRange=getRealAttackRange();
+    qreal minDis=realRange;
 
-    for (Enemy* e : enemyList)
+    for (Enemy* e:enemyList)
     {
         if (e->isDead())
             continue;
         QLineF disLine(pos(), e->pos());
-        qreal dis = disLine.length();
-        if (dis < minDis)
+        qreal dis=disLine.length();
+        if (dis<minDis)
         {
-            minDis = dis;
-            nearest = e;
+            minDis=dis;
+            nearest=e;
         }
     }
     return nearest;
@@ -101,19 +103,20 @@ Enemy* Tower::findTarget(const QList<Enemy *> &enemyList)
 
 Bullet* Tower::createBullet(Enemy *target)
 {
-    return new Bullet(this->pos(), target, m_attackDamage);
+    float finalDmg = getRealDamage();
+    return new Bullet(this->pos(), target, static_cast<int>(finalDmg), this);
 }
-
+//原始造价
 int Tower::getBuildCost() const
 {
     return m_buildCost;
 }
-
+//原始范围
 int Tower::getAttackRange() const
 {
     return m_attackRange;
 }
-
+//原始伤害
 int Tower::getDamage() const
 {
     return m_attackDamage;
@@ -122,4 +125,14 @@ int Tower::getDamage() const
 int Tower::getAttackInterval() const
 {
     return m_attackInterval;
+}
+
+float Tower::getRealAttackRange() const{
+    BuffState buff=m_controller->getGlobalBuff();
+    return m_attackRange*buff.attackRangeRate;
+}
+
+float Tower::getRealDamage() const{
+    BuffState buff=m_controller->getGlobalBuff();
+    return m_attackDamage*buff.damageRate;
 }

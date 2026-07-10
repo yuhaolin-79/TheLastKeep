@@ -7,13 +7,15 @@
 
 #include "entity/Bullet.h"
 #include "entity/Enemy.h"
+#include "entity/Tower.h"
 #include <QPixmap>
 #include <QLineF>
 
-Bullet::Bullet(QPointF startPos, Enemy *target, int damage)
+Bullet::Bullet(QPointF startPos, Enemy *target, int damage, Tower* shootTower)
     : QGraphicsPixmapItem(nullptr),
     m_targetEnemy(target),
     m_damage(damage),
+    m_shootTower(shootTower),
     m_speed(6)
 {
     setPos(startPos);
@@ -33,7 +35,9 @@ void Bullet::updateMove()
     // 距离足够近，命中敌人
     if (dist < 8)
     {
-        m_targetEnemy->takeDamage(m_damage);
+        Tower* shootTower = this->getShootTower();
+        int realDmg = static_cast<int>(shootTower->getRealDamage());
+        m_targetEnemy->takeDamage(realDmg);
         return;
     }
 
@@ -53,4 +57,9 @@ bool Bullet::hitTarget() const
 int Bullet::getDamage() const
 {
     return m_damage;
+}
+
+Tower* Bullet::getShootTower() const
+{
+    return m_shootTower;
 }

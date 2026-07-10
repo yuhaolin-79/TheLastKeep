@@ -10,6 +10,9 @@
 #define GAMECONTROLLER_H
 
 #include <QObject>
+#include "card/Card.h"
+#include "card/CardManager.h"
+
 
 class GameController : public QObject
 {
@@ -27,10 +30,17 @@ public:
     bool canBuildTower(int cost) const;
     int getGold() const;
 
+    //卡牌buff系统接口
+    QVector<CardInfo>waveFinishShowCard();
+    void selectBuffCard(CardType type);
+    BuffState getGlobalBuff()const;
+    void gameRestartReset();
+
 private:
     int m_castleMaxHp;    // 城堡最大血量
     int m_castleCurrentHp;// 城堡当前血量
-    int m_gold;           // 当前金币
+    int m_gold;    // 当前金币
+    CardManager m_cardMgr;
 };
 
 #endif // GAMECONTROLLER_H

@@ -14,20 +14,23 @@
 #include <QPointF>
 
 class Enemy;
+class Tower;
 
 class Bullet : public QGraphicsPixmapItem
 {
 public:
-    Bullet(QPointF startPos, Enemy* target, int damage);
+    Bullet(QPointF startPos, Enemy* target, int damage,Tower* shootTower);
 
     void updateMove();
     bool hitTarget() const;
     int getDamage() const;
+    Tower* getShootTower()const;
 
 private:
     Enemy* m_targetEnemy;
     int m_damage;
     int m_speed;
+    Tower* m_shootTower;
 };
 
 #endif // BULLET_H

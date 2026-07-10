@@ -27,11 +27,11 @@ enum class TowerType
     HolyTower
 };
 
-class Tower : public QGraphicsPixmapItem
+class Tower:public QGraphicsPixmapItem
 {
 public:
     Tower(TowerType type, QPointF pos, GameController* ctrl);
-    ~Tower() = default;
+    ~Tower()=default;
 
     // 每帧执行攻击逻辑，生成子弹返回
     Bullet* updateAttack(const QList<Enemy*>& enemyList);
@@ -39,11 +39,14 @@ public:
     Enemy* findTarget(const QList<Enemy*>& enemyList);
     // 创建子弹指向目标敌人
     Bullet* createBullet(Enemy* target);
-
+    //原始基础属性
     int getBuildCost() const;
     int getAttackRange() const;
     int getDamage() const;
     int getAttackInterval() const;
+    //叠加buff后的真实生效属性
+    float getRealAttackRange() const;
+    float getRealDamage()const;
 
 private:
     void initTowerAttr(TowerType type);

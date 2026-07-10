@@ -42,6 +42,12 @@ public:
     bool reachedCastle() const;
     // 获取击杀奖励金币
     int getReward() const;
+    //对城堡造成的伤害
+    int getCastleDamage() const;
+    //敌人撞到城堡后判定为死亡
+    void setDead(bool isDead);
+    //血量归零死亡的敌人
+    bool isHpZero() const;
 
 private:
     // 根据类型初始化血量、速度、奖励、贴图
@@ -55,6 +61,8 @@ private:
     int m_speed;
     int m_rewardGold;
     GameController* m_controller;
+    int m_castleDamage;
+    bool m_isDead;
 };
 
 #endif // ENEMY_H
