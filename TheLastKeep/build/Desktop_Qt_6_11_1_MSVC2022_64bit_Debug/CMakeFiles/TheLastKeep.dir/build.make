@@ -60,6 +60,9 @@ include CMakeFiles\TheLastKeep.dir\flags.make
 
 .qt\rcc\qrc_game_resources.cpp: E:\TheLastKeep\TheLastKeep\resources\images\background.png
 .qt\rcc\qrc_game_resources.cpp: E:\TheLastKeep\TheLastKeep\resources\images\tutorialLevelMap.png
+.qt\rcc\qrc_game_resources.cpp: E:\TheLastKeep\TheLastKeep\resources\images\ui\start_button.png
+.qt\rcc\qrc_game_resources.cpp: E:\TheLastKeep\TheLastKeep\resources\images\ui\level_select_button.png
+.qt\rcc\qrc_game_resources.cpp: E:\TheLastKeep\TheLastKeep\resources\images\ui\quit_button.png
 .qt\rcc\qrc_game_resources.cpp: .qt\rcc\game_resources.qrc
 .qt\rcc\qrc_game_resources.cpp: C:\Qt\6.11.1\msvc2022_64\bin\rcc.exe
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=E:\TheLastKeep\TheLastKeep\build\Desktop_Qt_6_11_1_MSVC2022_64bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running rcc for resource game_resources"
