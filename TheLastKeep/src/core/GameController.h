@@ -11,6 +11,9 @@
 #include <QObject>
 #include <QTimer>
 
+#include "card/Card.h"
+#include "card/CardManager.h"
+
 #include "common/GameTypes.h"
 #include "core/StateManager.h"
 
@@ -51,6 +54,11 @@ public:
     bool isRunning() const;
     GameStatus status() const;
 
+    // 金币管理接口
+    void addGold(int num);
+    void spendGold(int num);
+    bool canBuildTower(int cost) const;
+
 signals:
     void statusChanged(GameStatus status);
 
@@ -58,6 +66,12 @@ signals:
 
 public slots:
     void updateFrame();
+
+    //卡牌buff系统接口
+    QVector<CardInfo>waveFinishShowCard();
+    void selectBuffCard(CardType type);
+    BuffState getGlobalBuff()const;
+    void gameRestartReset();
 
 private:
     void startTimerSafely();
@@ -74,5 +88,9 @@ private:
 
     // 区分玩家主动暂停和页面隐藏导致暂停
     bool m_pausedByPageHidden = false;
-};
 
+    int m_castleMaxHp;    // 城堡最大血量
+    int m_castleCurrentHp;// 城堡当前血量
+    int m_gold;    // 当前金币
+    CardManager m_cardMgr;
+};

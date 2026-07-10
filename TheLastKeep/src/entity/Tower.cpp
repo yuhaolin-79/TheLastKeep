@@ -6,12 +6,13 @@
  */
 
 
-// #include "entity/Tower.h"
-// #include "entity/Enemy.h"
-// #include "entity/Bullet.h"
-// #include "core/GameController.h"
-// #include <QPixmap>
-// #include <QLineF>
+#include "entity/Tower.h"
+#include "entity/Enemy.h"
+#include "entity/Bullet.h"
+#include "core/GameController.h"
+#include <QPixmap>
+#include <QLineF>
+#include"card/Card.h"
 
 // Tower::Tower(TowerType type, QPointF pos, GameController *ctrl)
 //     : QGraphicsPixmapItem(nullptr),
@@ -65,61 +66,73 @@
 //     }
 // }
 
-// Bullet* Tower::updateAttack(const QList<Enemy *> &enemyList)
-// {
-//     qint64 now = QDateTime::currentMSecsSinceEpoch();
-//     if (now - m_lastAttackTime < m_attackInterval)
-//         return nullptr;
+Bullet* Tower::updateAttack(const QList<Enemy *> &enemyList)
+{
+    qint64 now=QDateTime::currentMSecsSinceEpoch();
+    if (now-m_lastAttackTime<m_attackInterval)
+        return nullptr;
 
-//     Enemy* target = findTarget(enemyList);
-//     if (!target)
-//         return nullptr;
+    Enemy* target=findTarget(enemyList);
+    if (!target)
+        return nullptr;
 
-//     m_lastAttackTime = now;
-//     return createBullet(target);
-// }
+    m_lastAttackTime=now;
+    return createBullet(target);
+}
 
-// Enemy* Tower::findTarget(const QList<Enemy *> &enemyList)
-// {
-//     Enemy* nearest = nullptr;
-//     qreal minDis = m_attackRange;
+Enemy* Tower::findTarget(const QList<Enemy *> &enemyList)
+{
+    Enemy* nearest=nullptr;
+    float realRange=getRealAttackRange();
+    qreal minDis=realRange;
 
-//     for (Enemy* e : enemyList)
-//     {
-//         if (e->isDead())
-//             continue;
-//         QLineF disLine(pos(), e->pos());
-//         qreal dis = disLine.length();
-//         if (dis < minDis)
-//         {
-//             minDis = dis;
-//             nearest = e;
-//         }
-//     }
-//     return nearest;
-// }
+    for (Enemy* e:enemyList)
+    {
+        if (e->isDead())
+            continue;
+        QLineF disLine(pos(), e->pos());
+        qreal dis=disLine.length();
+        if (dis<minDis)
+        {
+            minDis=dis;
+            nearest=e;
+        }
+    }
+    return nearest;
+}
 
-// Bullet* Tower::createBullet(Enemy *target)
-// {
-//     return new Bullet(this->pos(), target, m_attackDamage);
-// }
+Bullet* Tower::createBullet(Enemy *target)
+{
+    float finalDmg = getRealDamage();
+    return new Bullet(this->pos(), target, static_cast<int>(finalDmg), this);
+}
+//原始造价
+int Tower::getBuildCost() const
+{
+    return m_buildCost;
+}
+//原始范围
+int Tower::getAttackRange() const
+{
+    return m_attackRange;
+}
+//原始伤害
+int Tower::getDamage() const
+{
+    return m_attackDamage;
+}
 
-// int Tower::getBuildCost() const
-// {
-//     return m_buildCost;
-// }
+int Tower::getAttackInterval() const
+{
+    return m_attackInterval;
+}
 
-// int Tower::getAttackRange() const
-// {
-//     return m_attackRange;
-// }
+float Tower::getRealAttackRange() const{
+    BuffState buff=m_controller->getGlobalBuff();
+    return m_attackRange*buff.attackRangeRate;
+}
 
-// int Tower::getDamage() const
-// {
-//     return m_attackDamage;
-// }
-
-// int Tower::getAttackInterval() const
-// {
-//     return m_attackInterval;
-// }
+float Tower::getRealDamage() const{
+    BuffState buff=m_controller->getGlobalBuff();
+    return m_attackDamage*buff.damageRate;
+}

@@ -7,18 +7,20 @@
 
 #include "entity/Bullet.h"
 #include "entity/Enemy.h"
+#include "entity/Tower.h"
 #include <QPixmap>
 #include <QLineF>
 
-// Bullet::Bullet(QPointF startPos, Enemy *target, int damage)
-//     : QGraphicsPixmapItem(nullptr),
-//     m_targetEnemy(target),
-//     m_damage(damage),
-//     m_speed(6)
-// {
-//     setPos(startPos);
-//     setPixmap(QPixmap(":/assets/images/bullets/arrow.png"));
-// }
+Bullet::Bullet(QPointF startPos, Enemy *target, int damage, Tower* shootTower)
+    : QGraphicsPixmapItem(nullptr),
+    m_targetEnemy(target),
+    m_damage(damage),
+    m_shootTower(shootTower),
+    m_speed(6)
+{
+    setPos(startPos);
+    setPixmap(QPixmap(":/assets/images/bullets/arrow.png"));
+}
 
 // void Bullet::updateMove()
 // {
@@ -30,12 +32,14 @@
 //     QLineF line(pos(), targetPos);
 //     qreal dist = line.length();
 
-//     // 距离足够近，命中敌人
-//     if (dist < 8)
-//     {
-//         m_targetEnemy->takeDamage(m_damage);
-//         return;
-//     }
+    // 距离足够近，命中敌人
+    if (dist < 8)
+    {
+        Tower* shootTower = this->getShootTower();
+        int realDmg = static_cast<int>(shootTower->getRealDamage());
+        m_targetEnemy->takeDamage(realDmg);
+        return;
+    }
 
 //     // 向敌人移动
 //     QPointF dir = line.unitVector().p2() - line.unitVector().p1();
@@ -50,7 +54,12 @@
 //     return line.length() < 8;
 // }
 
-// int Bullet::getDamage() const
-// {
-//     return m_damage;
-// }
+int Bullet::getDamage() const
+{
+    return m_damage;
+}
+
+Tower* Bullet::getShootTower() const
+{
+    return m_shootTower;
+}
