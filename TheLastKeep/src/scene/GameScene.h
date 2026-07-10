@@ -10,28 +10,40 @@
 
 #include "map/GameMap.h"
 
-class QPushButton;
-class QGraphicsProxyWidget;
+class QGraphicsSceneMouseEvent;
 
-class GameScene : public QGraphicsScene{
+// GameScene：游戏画布
+// 职责：
+// 1. 显示地图
+// 2. 显示 QGraphicsItem
+// 3. 接收鼠标点击并转发
+// 4. 清理场景
+//
+// 不负责：
+// 1. 开始游戏按钮
+// 2. 退出游戏按钮
+// 3. 页面切换
+// 4. QTimer
+class GameScene : public QGraphicsScene {
     Q_OBJECT
 
 public:
     explicit GameScene(QObject *parent = nullptr);
 
-    // 加载教程关卡（由 MainWindow 在"开始游戏"时调用）
+    void setupScene();
+    void clearSceneSafely();
+
     void loadTutorialLevel();
 
 signals:
-    void sigStartGame();
-    void sigQuitGame();
+    void sceneLeftClicked(const QPointF &scenePos);
+    void sceneRightClicked(const QPointF &scenePos);
 
 protected:
-    void mousePressEvent(QGraphicsSceneMouseEvent* event) override;
+    void mousePressEvent(QGraphicsSceneMouseEvent *event) override;
 
 private:
-    void buildDemoMap();
-    QGraphicsProxyWidget* createBtn(const QString& text, int x, int y, int w, int h);
+    void drawBackground();
 
 private:
     GameMap m_map;

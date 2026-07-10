@@ -39,16 +39,22 @@ template <> constexpr inline auto GameScene::qt_create_metaobjectdata<qt_meta_ta
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "GameScene",
-        "sigStartGame",
+        "sceneLeftClicked",
         "",
-        "sigQuitGame"
+        "QPointF",
+        "scenePos",
+        "sceneRightClicked"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'sigStartGame'
-        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'sigQuitGame'
-        QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
+        // Signal 'sceneLeftClicked'
+        QtMocHelpers::SignalData<void(const QPointF &)>(1, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 3, 4 },
+        }}),
+        // Signal 'sceneRightClicked'
+        QtMocHelpers::SignalData<void(const QPointF &)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 3, 4 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -72,15 +78,15 @@ void GameScene::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
     auto *_t = static_cast<GameScene *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->sigStartGame(); break;
-        case 1: _t->sigQuitGame(); break;
+        case 0: _t->sceneLeftClicked((*reinterpret_cast<std::add_pointer_t<QPointF>>(_a[1]))); break;
+        case 1: _t->sceneRightClicked((*reinterpret_cast<std::add_pointer_t<QPointF>>(_a[1]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (GameScene::*)()>(_a, &GameScene::sigStartGame, 0))
+        if (QtMocHelpers::indexOfMethod<void (GameScene::*)(const QPointF & )>(_a, &GameScene::sceneLeftClicked, 0))
             return;
-        if (QtMocHelpers::indexOfMethod<void (GameScene::*)()>(_a, &GameScene::sigQuitGame, 1))
+        if (QtMocHelpers::indexOfMethod<void (GameScene::*)(const QPointF & )>(_a, &GameScene::sceneRightClicked, 1))
             return;
     }
 }
@@ -117,14 +123,14 @@ int GameScene::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void GameScene::sigStartGame()
+void GameScene::sceneLeftClicked(const QPointF & _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 0, nullptr, _t1);
 }
 
 // SIGNAL 1
-void GameScene::sigQuitGame()
+void GameScene::sceneRightClicked(const QPointF & _t1)
 {
-    QMetaObject::activate(this, &staticMetaObject, 1, nullptr);
+    QMetaObject::activate<void>(this, &staticMetaObject, 1, nullptr, _t1);
 }
 QT_WARNING_POP

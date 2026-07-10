@@ -12,12 +12,14 @@ E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/TheLastK
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/stdlib.h \
   C:/Program\ Files\ (x86)/Windows\ Kits/10/include/10.0.26100.0/ucrt/string.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/QObject \
+  C:/Qt/6.11.1/msvc2022_64/include/QtCore/QTimer \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/q17memory.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/q20bit.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/q20functional.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/q20memory.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/q20type_traits.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/q23type_traits.h \
+  C:/Qt/6.11.1/msvc2022_64/include/QtCore/qabstracteventdispatcher.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qalgorithms.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qanystringview.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qarraydata.h \
@@ -27,6 +29,7 @@ E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/TheLastK
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qatomic.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qatomic_cxx11.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qbasicatomic.h \
+  C:/Qt/6.11.1/msvc2022_64/include/QtCore/qbasictimer.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qbindingstorage.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qbytearray.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qbytearrayalgorithms.h \
@@ -44,6 +47,8 @@ E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/TheLastK
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qcontainertools_impl.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.11.1/msvc2022_64/include/QtCore/qdeadlinetimer.h \
+  C:/Qt/6.11.1/msvc2022_64/include/QtCore/qeventloop.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qexceptionhandling.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qflags.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qfloat16.h \
@@ -102,6 +107,7 @@ E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/TheLastK
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtformat_impl.h \
+  C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtimer.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtnoop.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qtpreprocessorsupport.h \
@@ -116,6 +122,8 @@ E:/TheLastKeep/TheLastKeep/build/Desktop_Qt_6_11_1_MSVC2022_64bit_Debug/TheLastK
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qversiontagging.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.11.1/msvc2022_64/include/QtCore/qyieldcpu.h \
+  E:/TheLastKeep/TheLastKeep/src/common/GameTypes.h \
+  E:/TheLastKeep/TheLastKeep/src/core/StateManager.h \
   E:/Visual\ Studio/VC/Tools/MSVC/14.44.35207/include/algorithm \
   E:/Visual\ Studio/VC/Tools/MSVC/14.44.35207/include/array \
   E:/Visual\ Studio/VC/Tools/MSVC/14.44.35207/include/atomic \

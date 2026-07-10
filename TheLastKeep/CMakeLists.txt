@@ -85,6 +85,10 @@ qt_add_resources(TheLastKeep "game_resources"
     FILES
         resources/images/background.png
         resources/images/tutorialLevelMap.png
+
+        resources/images/ui/start_button.png
+        resources/images/ui/level_select_button.png
+        resources/images/ui/quit_button.png
 )
 
 target_include_directories(TheLastKeep

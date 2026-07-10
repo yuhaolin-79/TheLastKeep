@@ -2,6 +2,9 @@
   <qresource prefix="/">
     <file alias="images/background.png">E:/TheLastKeep/TheLastKeep/resources/images/background.png</file>
     <file alias="images/tutorialLevelMap.png">E:/TheLastKeep/TheLastKeep/resources/images/tutorialLevelMap.png</file>
+    <file alias="images/ui/start_button.png">E:/TheLastKeep/TheLastKeep/resources/images/ui/start_button.png</file>
+    <file alias="images/ui/level_select_button.png">E:/TheLastKeep/TheLastKeep/resources/images/ui/level_select_button.png</file>
+    <file alias="images/ui/quit_button.png">E:/TheLastKeep/TheLastKeep/resources/images/ui/quit_button.png</file>
   </qresource>
 </RCC>
 

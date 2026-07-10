@@ -6,10 +6,10 @@
  */
 
 
-#include "entity/Enemy.h"
-#include "core/GameController.h"
-#include <QPixmap>
-#include <QLineF>
+// #include "entity/Enemy.h"
+// #include "core/GameController.h"
+// #include <QPixmap>
+// #include <QLineF>
 
 Enemy::Enemy(const QVector<QPointF> &path, EnemyType type, GameController *ctrl)
     : QGraphicsPixmapItem(nullptr),
@@ -69,47 +69,47 @@ void Enemy::initEnemyAttr(EnemyType type)
     m_hp = m_maxHp;
 }
 
-void Enemy::updateMove()
-{
-    // 死亡或路径走完不移动
-    if (isDead() || m_currentTargetIdx >= m_path.size())
-        return;
+// void Enemy::updateMove()
+// {
+//     // 死亡或路径走完不移动
+//     if (isDead() || m_currentTargetIdx >= m_path.size())
+//         return;
 
-    QPointF target = m_path[m_currentTargetIdx];
-    QLineF line(pos(), target);
-    qreal dist = line.length();
+//     QPointF target = m_path[m_currentTargetIdx];
+//     QLineF line(pos(), target);
+//     qreal dist = line.length();
 
-    if (dist < m_speed)
-    {
-        setPos(target);
-        m_currentTargetIdx++;
-    }
-    else
-    {
-        QPointF dir = line.unitVector().p2() - line.unitVector().p1();
-        setPos(pos() + dir * m_speed);
-    }
-}
+//     if (dist < m_speed)
+//     {
+//         setPos(target);
+//         m_currentTargetIdx++;
+//     }
+//     else
+//     {
+//         QPointF dir = line.unitVector().p2() - line.unitVector().p1();
+//         setPos(pos() + dir * m_speed);
+//     }
+// }
 
-void Enemy::takeDamage(int damage)
-{
-    m_hp -= damage;
-    // 敌人死亡发放金币
-    if (m_hp <= 0 && m_controller)
-    {
-        m_controller->addGold(m_rewardGold);
-    }
-}
+// void Enemy::takeDamage(int damage)
+// {
+//     m_hp -= damage;
+//     // 敌人死亡发放金币
+//     if (m_hp <= 0 && m_controller)
+//     {
+//         m_controller->addGold(m_rewardGold);
+//     }
+// }
 
 bool Enemy::isDead() const
 {
     return m_hp <= 0|| m_isDead;
 }
 
-bool Enemy::reachedCastle() const
-{
-    return m_currentTargetIdx >= m_path.size();
-}
+// bool Enemy::reachedCastle() const
+// {
+//     return m_currentTargetIdx >= m_path.size();
+// }
 
 int Enemy::getReward() const
 {

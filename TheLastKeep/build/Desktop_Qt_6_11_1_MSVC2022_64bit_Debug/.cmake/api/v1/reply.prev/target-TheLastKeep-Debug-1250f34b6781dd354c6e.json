@@ -525,11 +525,11 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "TheLastKeep_autogen::@6890427a1f51a3e7e1df"
+			"id" : "TheLastKeep_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "TheLastKeep_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "TheLastKeep_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "TheLastKeep::@6890427a1f51a3e7e1df",
@@ -770,7 +770,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "src/ui/Mainwindow.h",
+			"path" : "src/ui/MainWindow.h",
 			"sourceGroupIndex" : 2
 		},
 		{
