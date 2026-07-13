@@ -17,8 +17,8 @@ QVector<CardInfo> createAllCardTemplateStatic(){
     damageCard.titleText = "强攻符文";
     damageCard.descText = "所有防御塔伤害永久提升15%";
     damageCard.buffValue = 0.15f;
-    damageCard.cardBackgroundPath = ":/images/1.png";
-    damageCard.cardIconPath = ":/images/1.png";
+    damageCard.cardBackgroundPath = ":/images/card1.png";
+    damageCard.cardIconPath = ":/images/card1.png";
     templates.append(damageCard);
 
     //建造降价卡模板
@@ -27,8 +27,8 @@ QVector<CardInfo> createAllCardTemplateStatic(){
     costCard.titleText = "建材折扣";
     costCard.descText = "建造防御塔价格永久降低10%";
     costCard.buffValue = 0.90f;
-    costCard.cardBackgroundPath = ":/images/0.png";
-    costCard.cardIconPath = ":/images/0.png";
+    costCard.cardBackgroundPath = ":/images/card0.png";
+    costCard.cardIconPath = ":/images/card0.png";
     templates.append(costCard);
 
     //金币加成卡模板
@@ -37,8 +37,8 @@ QVector<CardInfo> createAllCardTemplateStatic(){
     goldCard.titleText = "淘金术";
     goldCard.descText = "击杀敌人获得金币永久提升20%";
     goldCard.buffValue = 0.20f;
-    goldCard.cardBackgroundPath = ":/images/3.png";
-    goldCard.cardIconPath = ":/images/3.png";
+    goldCard.cardBackgroundPath = ":/images/card3.png";
+    goldCard.cardIconPath = ":/images/card3.png";
     templates.append(goldCard);
 
     //范围扩大卡模板
@@ -47,8 +47,8 @@ QVector<CardInfo> createAllCardTemplateStatic(){
     rangeCard.titleText = "望远透镜";
     rangeCard.descText = "所有防御塔攻击范围永久扩大10%";
     rangeCard.buffValue = 0.10f;
-    rangeCard.cardBackgroundPath = ":/images/2.png";
-    rangeCard.cardIconPath = ":/images/2.png";
+    rangeCard.cardBackgroundPath = ":/images/card2.png";
+    rangeCard.cardIconPath = ":/images/card2.png";
     templates.append(rangeCard);
 
     return templates;

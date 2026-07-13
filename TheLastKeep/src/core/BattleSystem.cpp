@@ -4,67 +4,128 @@
  *     战斗对象清理
  *      @chen 2026/07/10 version 1.0
  */
-#include"BattleSystem.h"
-#include"CollisionSystem.h"
-#include"core/GameController.h"
-#include"entity/Tower.h"
-#include"entity/Enemy.h"
-#include"entity/Bullet.h"
-#include"entity/Castle.h"
+#include "core/BattleSystem.h"
+#include "core/CollisionSystem.h"
+#include "core/GameController.h"
+#include "entity/Tower.h"
+#include "entity/Enemy.h"
+#include "entity/Bullet.h"
+#include "entity/Castle.h"
 
-BattleSystem::BattleSystem(GameController* gameCtrl, Castle* castle, QObject* parent)
-    : m_gameController(gameCtrl), m_mainCastle(castle), QObject(parent){
+#include <QDebug>
+#include <QGraphicsPixmapItem>
+#include <QGraphicsScene>
+#include <QPixmap>
+#include <QTimer>
+
+BattleSystem::BattleSystem(GameController* gameCtrl,
+                           Castle* castle,
+                           QGraphicsScene* scene,
+                           QObject* parent)
+    : QObject(parent),
+    m_gameController(gameCtrl),
+    m_mainCastle(castle),
+    m_scene(scene)
+{
 }
+
 void BattleSystem::frameUpdate(){
     updateAllTowers();
     updateAllEnemies();
     updateAllBullets();
     runGlobalCollisionCheck();
-
-    if(isWaveAllClear()){
-        m_gameController->waveFinishShowCard();
-    }
+    cleanDeadEnemies();
 }
 
 void BattleSystem::addTower(Tower* tower){
-    if(tower!=nullptr)
-        m_towerContainer.append(tower);
+    if(!tower)
+        return;
+
+    m_towerContainer.append(tower);
+
+    // 图形对象必须加入 scene 才能显示。这里集中处理，避免 GameController 同时管逻辑和显示。
+    if(m_scene && !tower->scene()){
+        m_scene->addItem(tower);
+    }
+}
+
+void BattleSystem::spawnEnemy(Enemy* enemy)
+{
+    if(!enemy)
+        return;
+
+    m_enemyContainer.append(enemy);
+    if(m_scene && !enemy->scene()){
+        m_scene->addItem(enemy);
+    }
 }
 
 void BattleSystem::spawnWaveEnemies(const QList<Enemy*> &waveEnemyGroup){
     for(Enemy* enemy:waveEnemyGroup){
-        if(enemy!=nullptr)
-            m_enemyContainer.append(enemy);
+        spawnEnemy(enemy);
     }
 }
 
 bool BattleSystem::isWaveAllClear() const{
     for(Enemy* enemy:m_enemyContainer){
-        if(!enemy->isDead())
+        if(enemy && !enemy->isDead())
             return false;
     }
     return true;
 }
 
+int BattleSystem::activeEnemyCount() const
+{
+    int count = 0;
+    for(Enemy* enemy : m_enemyContainer){
+        if(enemy && !enemy->isDead()){
+            ++count;
+        }
+    }
+    return count;
+}
+
 void BattleSystem::clearAllBattleObjects(){
-    //释放塔内存
-    for (Tower* t:m_towerContainer) delete t;
+    for (Tower* t:m_towerContainer){
+        if(m_scene && t && t->scene() == m_scene) m_scene->removeItem(t);
+        delete t;
+    }
     m_towerContainer.clear();
-    //释放敌人内存
-    for (Enemy* e:m_enemyContainer) delete e;
+
+    for (Enemy* e:m_enemyContainer){
+        if(m_scene && e && e->scene() == m_scene) m_scene->removeItem(e);
+        delete e;
+    }
     m_enemyContainer.clear();
-    //释放子弹内存
-    for (Bullet* b:m_bulletContainer) delete b;
+
+    for (Bullet* b:m_bulletContainer){
+        if(m_scene && b && b->scene() == m_scene) m_scene->removeItem(b);
+        delete b;
+    }
     m_bulletContainer.clear();
+}
+
+void BattleSystem::updateAllTowers(){
+    for(Tower* tower:m_towerContainer){
+        if(!tower) continue;
+        Bullet* bullet = tower->updateAttack(m_enemyContainer);
+        if(bullet){
+            m_bulletContainer.append(bullet);
+            if(m_scene && !bullet->scene()){
+                m_scene->addItem(bullet);
+            }
+        }
+    }
 }
 
 void BattleSystem::updateAllEnemies(){
     for(Enemy* enemy:m_enemyContainer){
-        if(enemy->isDead())
+        if(!enemy || enemy->isDead())
             continue;
-        //敌人沿路径移动
+
         enemy->updateMove();
-        //碰撞检测
+
+        // 敌人抵达城堡后立即扣除城堡血量，并把敌人标记为死亡等待统一清理。
         if(CollisionSystem::enemyReachCastle(enemy, m_mainCastle)){
             int damageToCastle=enemy->getCastleDamage();
             m_gameController->damageCastle(damageToCastle);
@@ -74,7 +135,12 @@ void BattleSystem::updateAllEnemies(){
 }
 
 void BattleSystem::updateAllBullets(){
-    for(Bullet* bullet:m_bulletContainer){
+    for(int i = m_bulletContainer.size() - 1; i >= 0; --i){
+        Bullet* bullet = m_bulletContainer[i];
+        if(!bullet || !bullet->hasLiveTarget()){
+            removeBulletAt(i);
+            continue;
+        }
         bullet->updateMove();
     }
 }
@@ -82,31 +148,32 @@ void BattleSystem::updateAllBullets(){
 void BattleSystem::runGlobalCollisionCheck(){
     for(int i=m_bulletContainer.size()-1;i>=0;i--){
         Bullet* bullet=m_bulletContainer[i];
+        if(!bullet || !bullet->hasLiveTarget()){
+            removeBulletAt(i);
+            continue;
+        }
+
         bool isHit=false;
 
         for(Enemy* enemy:m_enemyContainer){
-            if(enemy->isDead())
+            if(!enemy || enemy->isDead())
                 continue;
-            if(CollisionSystem::isBulletHitEnemy(bullet,enemy)){
-                // 从子弹拿到发射塔，实时读取当前全局Buff真实伤害
+
+            // collidesWithItem 依赖贴图包围盒；hitTarget 使用距离兜底，保证小贴图也能命中。
+            if(CollisionSystem::isBulletHitEnemy(bullet,enemy) || bullet->hitTarget()){
                 Tower* srcTower = bullet->getShootTower();
-                float realDamageFloat = srcTower->getRealDamage();
-                int finalDamage = static_cast<int>(realDamageFloat);
+                int finalDamage = srcTower ? static_cast<int>(srcTower->getRealDamage()) : bullet->getDamage();
 
                 enemy->takeDamage(finalDamage);
-                isHit=true;
-                // 仅血量耗尽击杀时奖励金币，抵达城堡标记死亡不奖励
-                if(enemy->isHpZero())
-                {
-                    int baseGold=enemy->getReward();
-                    m_gameController->addGold(baseGold);
+                if(srcTower){
+                    showHitEffect(enemy->pos(), srcTower->effectResourcePath());
                 }
+                isHit=true;
                 break;
             }
         }
         if(isHit){
-            delete bullet;
-            m_bulletContainer.removeAt(i);
+            removeBulletAt(i);
         }
     }
 }
@@ -114,16 +181,52 @@ void BattleSystem::runGlobalCollisionCheck(){
 void BattleSystem::cleanDeadEnemies(){
     QList<Enemy*> aliveEnemies;
     for (Enemy* e : m_enemyContainer){
-        // isDead() 同时覆盖两种情况：
-        // 1. 敌人血量 ≤ 0（被塔子弹击杀）
-        // 2. 敌人抵达城堡执行 setDead(true)
-        if (e->isDead()){
-            delete e; // 释放死亡敌人内存
+        if (!e || e->isDead()){
+            if(m_scene && e && e->scene() == m_scene) m_scene->removeItem(e);
+            delete e;
         }
         else{
-            aliveEnemies.append(e); // 存活敌人保留
+            aliveEnemies.append(e);
         }
     }
-    // 更新容器，只保留活着的敌人
     m_enemyContainer.swap(aliveEnemies);
+}
+
+void BattleSystem::removeBulletAt(int index)
+{
+    if(index < 0 || index >= m_bulletContainer.size()){
+        return;
+    }
+
+    Bullet* bullet = m_bulletContainer[index];
+    if(m_scene && bullet && bullet->scene() == m_scene){
+        m_scene->removeItem(bullet);
+    }
+    delete bullet;
+    m_bulletContainer.removeAt(index);
+}
+
+void BattleSystem::showHitEffect(const QPointF& pos, const QString& effectPath)
+{
+    if(!m_scene || effectPath.isEmpty()){
+        return;
+    }
+
+    QPixmap pixmap(effectPath);
+    if(pixmap.isNull()){
+        return;
+    }
+
+    QGraphicsPixmapItem* item = m_scene->addPixmap(
+        pixmap.scaled(46, 46, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    item->setOffset(-item->pixmap().width() / 2.0, -item->pixmap().height() / 2.0);
+    item->setPos(pos);
+    item->setZValue(40);
+
+    QTimer::singleShot(160, m_scene, [scene = m_scene, item]() {
+        if(item->scene() == scene){
+            scene->removeItem(item);
+        }
+        delete item;
+    });
 }

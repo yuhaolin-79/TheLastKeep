@@ -37,6 +37,7 @@ public:
     void drawGrid(QGraphicsScene* scene);
     void drawDebugTiles(QGraphicsScene* scene);
     void drawWayPoints(QGraphicsScene* scene);
+    void drawBuildableHints(QGraphicsScene* scene);
 
     QPoint sceneToGrid(const QPointF& scenePos) const;
     QPointF gridToSceneCenter(int row, int col) const;

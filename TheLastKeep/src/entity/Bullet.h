@@ -23,6 +23,7 @@ public:
 
     void updateMove();
     bool hitTarget() const;
+    bool hasLiveTarget() const;
     int getDamage() const;
     Tower* getShootTower()const;
 

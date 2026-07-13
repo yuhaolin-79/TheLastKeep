@@ -17,21 +17,11 @@
 #include <QWidget>
 
 class QGraphicsView;
-class QPushButton;
 
 class GameScene;
 class GameController;
+class HUDWidget;
 
-// GamePage：游戏页面容器
-// 职责：
-// 1. 创建 QGraphicsView
-// 2. 创建 GameScene
-// 3. 创建 GameController
-// 4. 页面隐藏时暂停游戏
-// 5. 页面显示时恢复游戏
-//
-// 注意：
-// GamePage 不直接写敌人移动、塔攻击等逻辑。
 class GamePage : public QWidget {
     Q_OBJECT
 
@@ -53,6 +43,7 @@ signals:
 protected:
     void hideEvent(QHideEvent *event) override;
     void showEvent(QShowEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
 
 private slots:
     void handlePauseOrResumeClicked();
@@ -65,14 +56,13 @@ private:
 
     void pauseBecauseHidden();
     void resumeBecauseShown();
+    void updateHudGeometry();
 
 private:
     QGraphicsView *m_view = nullptr;
     GameScene *m_scene = nullptr;
     GameController *m_controller = nullptr;
-
-    QPushButton *m_pauseButton = nullptr;
-    QPushButton *m_backButton = nullptr;
+    HUDWidget *m_hud = nullptr;
 
     int m_currentLevelId = -1;
 

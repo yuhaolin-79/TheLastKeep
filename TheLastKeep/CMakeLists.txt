@@ -14,7 +14,7 @@ qt_add_executable(TheLastKeep
     src/common/Result.h
 
     src/ui/MainWindow.h
-    src/ui/MainWindow.cpp
+    src/ui/Mainwindow.cpp
 
     src/ui/pages/StartPage.h
     src/ui/pages/StartPage.cpp
@@ -84,11 +84,43 @@ qt_add_resources(TheLastKeep "game_resources"
     BASE "resources"
     FILES
         resources/images/background.png
+        resources/images/bullet_cannon.png
+        resources/images/bullet_common.png
+        resources/images/bullet_crossbow.png
+        resources/images/bullet_flame.png
+        resources/images/bullet_magic.png
+        resources/images/bullet_shrine.png
+        resources/images/card0.png
+        resources/images/card1.png
+        resources/images/card2.png
+        resources/images/card3.png
+        resources/images/coin.png
+        resources/images/effect_cannon.png
+        resources/images/effect_common.png
+        resources/images/effect_crossbow.png
+        resources/images/effect_flame.png
+        resources/images/effect_magic.png
+        resources/images/effect_shrine.png
+        resources/images/enemy_boss_DemonWolf.png
+        resources/images/enemy_goblin.png
+        resources/images/enemy_skeletonSoldier.png
+        resources/images/enemy_wildmonster.png
+        resources/images/guidedmap.png
+        resources/images/HUD.png
+        resources/images/image.png
+        resources/images/image-1.png
+        resources/images/image-2.png
+        resources/images/ProjectStructure.png
+        resources/images/tower_cannon.png
+        resources/images/tower_common.png
+        resources/images/tower_crossbow.png
+        resources/images/tower_flame.png
+        resources/images/tower_magic.png
+        resources/images/tower_shrine.png
         resources/images/tutorialLevelMap.png
-
-        resources/images/ui/start_button.png
         resources/images/ui/level_select_button.png
         resources/images/ui/quit_button.png
+        resources/images/ui/start_button.png
 )
 
 target_include_directories(TheLastKeep

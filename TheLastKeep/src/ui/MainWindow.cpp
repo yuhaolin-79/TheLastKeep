@@ -134,7 +134,7 @@ void MainWindow::startLevel(int levelId){
     switchTo(m_gamePage);
 
     // 再让 GamePage 开始关卡
-    // 注意：MainWindow 不直接碰 GameScene 和 QTimer
+    // MainWindow 不直接碰 GameScene 和 QTimer
     m_gamePage->startLevel(levelId);
 }
 
@@ -145,7 +145,7 @@ void MainWindow::showResultPage(bool win, int score){
 
 void MainWindow::backToMenu(){
     // 返回主菜单时，必须彻底停止游戏
-    // 顺序：先停 QTimer，再清场景，再切页面
+    // 先停 QTimer，再清场景，再切页面
     if (m_gamePage) {
         m_gamePage->stopGame();
     }

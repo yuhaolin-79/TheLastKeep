@@ -1,6 +1,7 @@
 /* 功能 游戏画布
  * 负责 显示地图 显示 QGraphicsItem
  *     处理鼠标点击 把点击位置发给 GameController
+ *     拖拽建塔时显示放置辅助层
  *     清理场景
  */
 
@@ -13,13 +14,15 @@
 #include <QDebug>
 #include <QFile>
 #include <QFont>
-#include <QPen>
-#include <QGraphicsSimpleTextItem>
-#include <QPixmap>
+#include <QGraphicsItem>
 #include <QGraphicsPixmapItem>
+#include <QGraphicsRectItem>
+#include <QGraphicsSceneDragDropEvent>
 #include <QGraphicsSceneMouseEvent>
-#include <QPushButton>
-#include <QGraphicsProxyWidget>
+#include <QGraphicsSimpleTextItem>
+#include <QMimeData>
+#include <QPen>
+#include <QPixmap>
 
 GameScene::GameScene(QObject *parent)
     : QGraphicsScene(parent){
@@ -29,6 +32,7 @@ GameScene::GameScene(QObject *parent)
 void GameScene::setupScene()
 {
     clear();
+    m_placementHintItems.clear();
 
     setSceneRect(0,
                  0,
@@ -40,8 +44,6 @@ void GameScene::setupScene()
 
 void GameScene::clearSceneSafely()
 {
-    // 注意：
-    // 调用这个函数之前，GameController 必须已经 stopTimerSafely()
     setupScene();
 }
 
@@ -69,12 +71,12 @@ void GameScene::drawBackground()
 
 void GameScene::loadTutorialLevel()
 {
-    // 当前保留你已有的教程关卡加载方式
     LevelData tutorialLevel = LevelManager::createTutorialLevel();
 
     m_map.loadLevel(tutorialLevel);
 
     clear();
+    m_placementHintItems.clear();
 
     setSceneRect(
         0,
@@ -85,23 +87,91 @@ void GameScene::loadTutorialLevel()
 
     m_map.drawBackground(this);
 
-    // 调试阶段建议保留
-    m_map.drawDebugTiles(this);
-    m_map.drawGrid(this);
-    m_map.drawWayPoints(this);
+    // 默认不显示任何建塔辅助层；只有拖拽塔进入地图时才显示网格和区域颜色。
 
     update();
+}
+QVector<QPointF> GameScene::currentWayPoints() const
+{
+    return m_map.getWayPoints();
+}
+
+QPointF GameScene::tileCenter(int row, int col) const
+{
+    return m_map.gridToSceneCenter(row, col);
+}
+
+QPoint GameScene::gridForScenePos(const QPointF& scenePos) const
+{
+    return m_map.sceneToGrid(scenePos);
+}
+
+bool GameScene::canBuildAtGrid(const QPoint& gridPos) const
+{
+    return m_map.isBuildable(gridPos.x(), gridPos.y());
+}
+
+bool GameScene::canBuildAtScenePos(const QPointF& scenePos) const
+{
+    return canBuildAtGrid(gridForScenePos(scenePos));
+}
+
+void GameScene::showPlacementHints()
+{
+    hidePlacementHints();
+    drawPlacementGrid();
+}
+
+void GameScene::hidePlacementHints()
+{
+    for(QGraphicsItem* item : m_placementHintItems){
+        removeItem(item);
+        delete item;
+    }
+    m_placementHintItems.clear();
+}
+
+void GameScene::drawPlacementGrid()
+{
+    QPen gridPen(QColor(255, 255, 255, 82));
+    gridPen.setWidth(1);
+
+    for(int row = 0; row < m_map.rows(); ++row){
+        for(int col = 0; col < m_map.cols(); ++col){
+            QColor fillColor(20, 20, 20, 30);
+            QPen cellPen = gridPen;
+
+            if(m_map.isBuildable(row, col)){
+                fillColor = QColor(65, 210, 120, 118);
+                cellPen = QPen(QColor(255, 230, 130, 210), 2);
+            } else if(m_map.isRoad(row, col)){
+                fillColor = QColor(210, 80, 70, 72);
+            }
+
+            QGraphicsRectItem* cell = addRect(
+                col * m_map.tileSize(),
+                row * m_map.tileSize(),
+                m_map.tileSize(),
+                m_map.tileSize(),
+                cellPen,
+                QBrush(fillColor));
+            cell->setZValue(60);
+            m_placementHintItems.append(cell);
+        }
+    }
+}
+
+bool GameScene::isTowerDrag(const QGraphicsSceneDragDropEvent *event) const
+{
+    return event && event->mimeData()->hasFormat("application/x-thelastkeep-tower");
 }
 
 void GameScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
-    if (event->button() == Qt::LeftButton) {
-        emit sceneLeftClicked(event->scenePos());
-    } else if (event->button() == Qt::RightButton) {
+    if (event->button() == Qt::RightButton) {
         emit sceneRightClicked(event->scenePos());
     }
 
-    // 当前阶段保留调试输出，方便验证地图坐标
     QPoint gridPos = m_map.sceneToGrid(event->scenePos());
 
     int row = gridPos.x();
@@ -122,4 +192,43 @@ void GameScene::mousePressEvent(QGraphicsSceneMouseEvent *event)
     }
 
     QGraphicsScene::mousePressEvent(event);
+}
+void GameScene::dragEnterEvent(QGraphicsSceneDragDropEvent *event)
+{
+    if(isTowerDrag(event)){
+        showPlacementHints();
+        event->acceptProposedAction();
+        return;
+    }
+    QGraphicsScene::dragEnterEvent(event);
+}
+
+void GameScene::dragMoveEvent(QGraphicsSceneDragDropEvent *event)
+{
+    if(isTowerDrag(event)){
+        event->acceptProposedAction();
+        return;
+    }
+    QGraphicsScene::dragMoveEvent(event);
+}
+
+void GameScene::dragLeaveEvent(QGraphicsSceneDragDropEvent *event)
+{
+    hidePlacementHints();
+    QGraphicsScene::dragLeaveEvent(event);
+}
+
+void GameScene::dropEvent(QGraphicsSceneDragDropEvent *event)
+{
+    if(isTowerDrag(event)){
+        bool ok = false;
+        int towerType = QString::fromUtf8(event->mimeData()->data("application/x-thelastkeep-tower")).toInt(&ok);
+        if(ok){
+            emit sceneTowerDropped(event->scenePos(), towerType);
+        }
+        hidePlacementHints();
+        event->acceptProposedAction();
+        return;
+    }
+    QGraphicsScene::dropEvent(event);
 }

@@ -5,31 +5,34 @@
  *     更新 HUD
  */
 
-
 #pragma once
 
 #include <QObject>
 #include <QTimer>
+#include <QVector>
+#include <QPointF>
+#include <QPoint>
 
 #include "card/Card.h"
 #include "card/CardManager.h"
 
 #include "common/GameTypes.h"
 #include "core/StateManager.h"
+#include "entity/Enemy.h"
+#include "entity/Tower.h"
 
+class BattleSystem;
+class Castle;
 class GameScene;
 
 // GameController：游戏总控制器
 // @fish 2026/07/10 VERSSION 1.0
-// 第一阶段职责：
-// 1. 管理 QTimer
-// 2. 管理游戏状态 Running / Paused / Menu
-// 3. 加载关卡
-// 4. 页面隐藏时暂停，页面显示时恢复
-//
-// MainWindow 不应该直接控制 QTimer。
-// GameScene 不应该直接控制 QTimer。
-
+// 当前职责：
+// 1. 管理 QTimer 和游戏状态
+// 2. 加载关卡
+// 3. 管理页面隐藏/显示时的暂停恢复
+// 4. 持有 Castle + BattleSystem
+// 5. 暂时承担轻量波次刷怪，后续可拆分为 WaveManager
 class GameController : public QObject {
     Q_OBJECT
 
@@ -37,37 +40,37 @@ public:
     explicit GameController(GameScene *scene, QObject *parent = nullptr);
     ~GameController();
 
-    // 加载关卡 VERSION 1.0 只支持 levelID=0 的 引导关卡
     bool loadLevel(int levelID);
 
-    // 游戏生命周期接口 非常重要的部分
     void startGame();
     void pauseGame();
     void resumeGame();
     void stopGame();
     void clearGame();
 
-    // QStackedWidget 接口
     void pauseForPageHidden();
     void resumeForPageShown();
 
     bool isRunning() const;
     GameStatus status() const;
 
-    // 金币管理接口
     void addGold(int num);
     void spendGold(int num);
     bool canBuildTower(int cost) const;
 
+    void damageCastle(int damage);
+    void handleSceneLeftClicked(const QPointF& scenePos);
+    void setSelectedTowerType(TowerType type);
+    void handleTowerDropped(const QPointF& scenePos, int towerTypeValue);
+
 signals:
     void statusChanged(GameStatus status);
-
+    void statsChanged(int gold, int hp, int maxHp, int wave, int totalWave);
     void gameFinished(bool win, int score);
 
 public slots:
     void updateFrame();
 
-    //卡牌buff系统接口
     QVector<CardInfo>waveFinishShowCard();
     void selectBuffCard(CardType type);
     BuffState getGlobalBuff()const;
@@ -76,6 +79,13 @@ public slots:
 private:
     void startTimerSafely();
     void stopTimerSafely();
+    void setupTutorialBattlePrototype();
+    void clearBattleObjects();
+    void startNextWave();
+    void updateWaveSpawn();
+    QVector<EnemyType> createWaveTypes(int wave) const;
+    void emitStatsChanged();
+    bool tryBuildTowerAt(const QPointF& scenePos);
 
 private:
     GameScene *m_scene = nullptr;
@@ -85,12 +95,27 @@ private:
 
     int m_currentLevelId = -1;
     bool m_loaded = false;
-
-    // 区分玩家主动暂停和页面隐藏导致暂停
     bool m_pausedByPageHidden = false;
 
-    int m_castleMaxHp;    // 城堡最大血量
-    int m_castleCurrentHp;// 城堡当前血量
-    int m_gold;    // 当前金币
+    int m_castleMaxHp;
+    int m_castleCurrentHp;
+    int m_gold;
     CardManager m_cardMgr;
+
+    Castle* m_castle = nullptr;
+    BattleSystem* m_battleSystem = nullptr;
+
+    QVector<QPointF> m_currentPath;
+    QVector<QPoint> m_builtTowerGrids;
+    QVector<EnemyType> m_pendingEnemies;
+    int m_totalWaves = 3;
+    int m_currentWave = 0;
+    int m_spawnIndex = 0;
+    int m_spawnElapsedMs = 0;
+    int m_spawnIntervalMs = 850;
+    bool m_waveSpawning = false;
+    bool m_waitingForNextWave = false;
+    TowerType m_selectedTowerType = TowerType::ArrowTower;
+    int m_betweenWaveElapsedMs = 0;
+    int m_betweenWaveDelayMs = 1200;
 };

@@ -1,10 +1,6 @@
-<RCC>
-    <qresource prefix="/">
-        <file>images/background.png</file>
-        <file>images/tutorialLevelMap.png</file>
-        <file>images/0.png</file>
-        <file>images/1.png</file>
-        <file>images/2.png</file>
-        <file>images/3.png</file>
-    </qresource>
-</RCC>
+<!--
+    Deprecated.
+    The project now registers Qt resources only from CMakeLists.txt via qt_add_resources(... FILES ...).
+    Do not add new images here; add them to the CMake resource list instead.
+-->
+<RCC/>

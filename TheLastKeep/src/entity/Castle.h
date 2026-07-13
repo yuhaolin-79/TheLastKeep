@@ -26,10 +26,14 @@ public:
     // 成员函数声明
     void takeDamage(int dmg);
     bool isDestroyed() const;
+    int currentHp() const;
+    int maxHp() const;
 
 private:
     // 私有成员变量
     GameController* m_controller;
+    int m_maxHp = 1000;
+    int m_hp = 1000;
 };
 
 #endif // CASTLE_H
