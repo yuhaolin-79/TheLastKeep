@@ -112,6 +112,30 @@ void GameMap::drawDebugTiles(QGraphicsScene* scene) {
     }
 }
 
+void GameMap::drawBuildableHints(QGraphicsScene* scene) {
+    QPen borderPen(QColor(255, 226, 150, 135));
+    borderPen.setWidth(1);
+
+    QBrush fillBrush(QColor(45, 150, 95, 58));
+
+    for (int row = 0; row < m_levelData.rows; ++row) {
+        for (int col = 0; col < m_levelData.cols; ++col) {
+            if (getTileType(row, col) != TileType::Buildable) {
+                continue;
+            }
+
+            QGraphicsRectItem* hint = scene->addRect(
+                col * m_levelData.tileSize + 3,
+                row * m_levelData.tileSize + 3,
+                m_levelData.tileSize - 6,
+                m_levelData.tileSize - 6,
+                borderPen,
+                fillBrush
+                );
+            hint->setZValue(-20);
+        }
+    }
+}
 void GameMap::drawWayPoints(QGraphicsScene* scene) {
     QPen pen(QColor(255, 220, 0));
     pen.setWidth(3);

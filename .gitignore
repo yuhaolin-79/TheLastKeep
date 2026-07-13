@@ -1,0 +1,59 @@
+# 编译输出目录
+build-mingw/
+build/
+Build/
+debug/
+release/
+Debug/
+Release/
+
+# Qt 编译产物
+*.pro.user
+*.pro.user.*
+.qmake.stash
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# CMake 生成文件
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+.ninja_*
+
+# 可执行文件
+*.exe
+*.obj
+*.o
+*.dll
+*.so
+*.dylib
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*.user
+*.log
+
+# Qt Creator
+.qtcreator/
+
+# 其他编译产物
+.ninja_deps
+.ninja_log
+*.manifest
+compiler_depend.*
+*.recipe
+*.tlog/
+moc_*.cpp.d
+*.cpp.obj
+
+# 临时文件
+*.tmp
+*.temp
+Thumbs.db

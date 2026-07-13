@@ -11,9 +11,10 @@
 #define CARDMANAGER_H
 
 #include <QObject>
-#include "Card.h"
-extern QVector<CardInfo> createAllCardTemplateStatic();
 #include <QVector>
+#include "Card.h"
+
+extern QVector<CardInfo> createAllCardTemplateStatic();
 
 class CardManager : public QObject{
     Q_OBJECT

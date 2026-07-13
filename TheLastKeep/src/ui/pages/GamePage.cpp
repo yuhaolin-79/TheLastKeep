@@ -17,14 +17,14 @@
 #include "scene/GameScene.h"
 #include "core/GameController.h"
 #include "common/GameConstants.h"
+#include "ui/widgets/HUDWidget.h"
 
 #include <QGraphicsView>
 #include <QVBoxLayout>
-#include <QHBoxLayout>
-#include <QPushButton>
 #include <QFrame>
 #include <QPainter>
 #include <QHideEvent>
+#include <QResizeEvent>
 #include <QShowEvent>
 #include <QDebug>
 
@@ -46,21 +46,6 @@ void GamePage::setupUi()
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(0);
 
-    // 第一阶段临时控制栏
-    // 后面可以整体替换成 HUDWidget
-    auto *topBar = new QWidget(this);
-    topBar->setFixedHeight(48);
-
-    auto *topLayout = new QHBoxLayout(topBar);
-    topLayout->setContentsMargins(12, 6, 12, 6);
-
-    m_pauseButton = new QPushButton("暂停", topBar);
-    m_backButton = new QPushButton("返回主菜单", topBar);
-
-    topLayout->addWidget(m_pauseButton);
-    topLayout->addWidget(m_backButton);
-    topLayout->addStretch();
-
     m_scene = new GameScene(this);
 
     m_view = new QGraphicsView(m_scene, this);
@@ -68,30 +53,44 @@ void GamePage::setupUi()
     m_view->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_view->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     m_view->setFrameShape(QFrame::NoFrame);
+    m_view->setAcceptDrops(true);
     m_view->setSceneRect(0, 0,
                          GameConstants::WindowWidth,
                          GameConstants::WindowHeight);
 
     m_controller = new GameController(m_scene, this);
 
-    mainLayout->addWidget(topBar);
+    // HUD 作为 GamePage 的覆盖层存在，不再进入主布局。
+    // 这样游戏地图仍占满整个页面，HUD 和暂停/返回按钮视觉上浮在背景上。
+    m_hud = new HUDWidget(this);
+    m_hud->raise();
+
     mainLayout->addWidget(m_view);
+    updateHudGeometry();
 }
 
 void GamePage::setupConnections()
 {
-    connect(m_pauseButton, &QPushButton::clicked,
+    connect(m_hud, &HUDWidget::pauseClicked,
             this, &GamePage::handlePauseOrResumeClicked);
 
-    connect(m_backButton, &QPushButton::clicked,
+    connect(m_hud, &HUDWidget::backClicked,
             this, &GamePage::handleBackClicked);
 
-    connect(m_controller, &GameController::statusChanged,
+    connect(m_hud, &HUDWidget::towerSelected,
+            m_controller, &GameController::setSelectedTowerType);
+connect(m_controller, &GameController::statusChanged,
             this, [this](GameStatus status) {
-                if (status == GameStatus::Running) {
-                    m_pauseButton->setText("暂停");
-                } else if (status == GameStatus::Paused) {
-                    m_pauseButton->setText("继续");
+                if(!m_hud){
+                    return;
+                }
+                m_hud->setPaused(status == GameStatus::Paused);
+            });
+
+    connect(m_controller, &GameController::statsChanged,
+            this, [this](int gold, int hp, int maxHp, int wave, int totalWave) {
+                if(m_hud){
+                    m_hud->setStats(gold, hp, maxHp, wave, totalWave);
                 }
             });
 
@@ -101,7 +100,6 @@ void GamePage::setupConnections()
 
 void GamePage::startLevel(int levelId)
 {
-    // 开始新关卡前，先彻底停止旧游戏
     stopGame();
 
     m_currentLevelId = levelId;
@@ -114,6 +112,8 @@ void GamePage::startLevel(int levelId)
     }
 
     m_view->setSceneRect(m_scene->sceneRect());
+    updateHudGeometry();
+    m_hud->raise();
 
     m_controller->startGame();
 }
@@ -133,10 +133,6 @@ void GamePage::stopGame()
         return;
     }
 
-    // 关键顺序：
-    // 1. 停 QTimer
-    // 2. 清游戏场景
-    // 3. 重置 GamePage 状态
     m_controller->stopGame();
     m_controller->clearGame();
 
@@ -158,7 +154,6 @@ void GamePage::hideEvent(QHideEvent *event)
 {
     QWidget::hideEvent(event);
 
-    // 保险：即使不是 MainWindow::switchTo 调用，也能暂停
     pauseBecauseHidden();
 }
 
@@ -166,8 +161,17 @@ void GamePage::showEvent(QShowEvent *event)
 {
     QWidget::showEvent(event);
 
-    // 保险：页面重新显示时尝试恢复
+    updateHudGeometry();
+    if(m_hud){
+        m_hud->raise();
+    }
     resumeBecauseShown();
+}
+
+void GamePage::resizeEvent(QResizeEvent *event)
+{
+    QWidget::resizeEvent(event);
+    updateHudGeometry();
 }
 
 void GamePage::pauseBecauseHidden()
@@ -194,6 +198,17 @@ void GamePage::resumeBecauseShown()
 
     m_controller->resumeForPageShown();
     m_shouldResumeWhenShown = false;
+}
+
+void GamePage::updateHudGeometry()
+{
+    if(!m_hud){
+        return;
+    }
+
+    const int hudHeight = 76;
+    const int sideMargin = 14;
+    m_hud->setGeometry(sideMargin, 8, qMax(0, width() - sideMargin * 2), hudHeight);
 }
 
 void GamePage::handlePauseOrResumeClicked()

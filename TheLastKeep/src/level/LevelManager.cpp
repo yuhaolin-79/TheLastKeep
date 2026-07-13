@@ -14,9 +14,9 @@ LevelData LevelManager::createTutorialLevel() {
     level.levelname = "Tutorial Level";
     level.backgroundPath = ":/images/tutorialLevelMap.png";
 
-    level.rows = 18;
-    level.cols = 32;
-    level.tileSize = 40;
+    level.rows = 22;
+    level.cols = 40;
+    level.tileSize = 32;
 
     // E Empty 不可建塔，不可行走
     // R Road 道路，敌人行走区域
@@ -24,34 +24,38 @@ LevelData LevelManager::createTutorialLevel() {
     // S Start 敌人入口
     // E End 城堡终点
     level.mapData = {
-        "............................EEEE",
-        "........................RRRREEEE",
-        "........................R.......",
-        ".....BBB....BBB....BBB..R.......",
-        ".....BBB....BBB....BBB..R.......",
-        "........................R.......",
-        "..............RRRRRRRRRRR.......",
-        "..............R.................",
-        "....BBB.......R....BBB..........",
-        "....BBB.......R....BBB..........",
-        "..............R.................",
-        "........RRRRRRR.................",
-        "........R.......................",
-        "........R....BBB....BBB.........",
-        "........R....BBB....BBB.........",
-        "SSSSRRRRR.......................",
-        "................................",
-        "................................"
+        "............................BBBB....EEEE",
+        "............................BBBBRRRREEEE",
+        "............................BBBBR.......",
+        "......................BBBBBBBBBBR.......",
+        "......................BBBBBBBBBBR.......",
+        "..................BBBBBBBBBBBBBBR.......",
+        "..................BBRRRRRRRRRRRR.......",
+        "..................BBR...BBBBBBBB........",
+        "..........BBBBBBBBBBR...BBBBBBBB........",
+        "..........BBBBBBBBBBR...BBBBBBBB........",
+        "......BBBBBBBBBBBBBBR...................",
+        "......BBRRRRRRRRRRRRR...................",
+        "......BBR..BBBBBBBB.....................",
+        "......BBR..BBBBBBBB....BBBBBBBB.........",
+        "......BBR..BBBBBBBB....BBBBBBBB.........",
+        "......BBR..BBBBBBBB....BBBBBBBB.........",
+        "SSSSRRRRR..BBBBBBBB.....................",
+        "BBBBBBBBB...............................",
+        "BBBBBBBBB...............................",
+        "........................................",
+        "........................................",
+        "........................................"
     };
     level.wayPoints = {
-        QPoint(15, 0),   // 入口
-        QPoint(15, 8),
+        QPoint(16, 0),   // 入口：左下角道路
+        QPoint(16, 8),
         QPoint(11, 8),
-        QPoint(11, 14),
-        QPoint(6, 14),
-        QPoint(6, 24),
-        QPoint(1, 24),
-        QPoint(1, 31)    // 城堡终点
+        QPoint(11, 20),
+        QPoint(6, 20),
+        QPoint(6, 32),
+        QPoint(1, 32),
+        QPoint(1, 39)    // 城堡终点：右上角要塞
     };
 
     return level;
