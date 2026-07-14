@@ -102,31 +102,31 @@ void Tower::initTowerAttr(TowerType type)
     {
     case TowerType::ArrowTower:
         m_attackRange = 170;
-        m_attackDamage = 28;
+        m_attackDamage = 20;
         m_attackInterval = 760;
         m_buildCost = 50;
         break;
     case TowerType::MageTower:
         m_attackRange = 150;
-        m_attackDamage = 64;
+        m_attackDamage = 40;
         m_attackInterval = 1180;
         m_buildCost = 100;
         break;
     case TowerType::CannonTower:
         m_attackRange = 185;
-        m_attackDamage = 105;
+        m_attackDamage = 50;
         m_attackInterval = 1700;
         m_buildCost = 150;
         break;
     case TowerType::IceTower:
         m_attackRange = 155;
-        m_attackDamage = 22;
+        m_attackDamage = 25;
         m_attackInterval = 620;
         m_buildCost = 80;
         break;
     case TowerType::HolyTower:
         m_attackRange = 175;
-        m_attackDamage = 44;
+        m_attackDamage = 40;
         m_attackInterval = 900;
         m_buildCost = 120;
         break;

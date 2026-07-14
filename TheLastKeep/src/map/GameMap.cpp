@@ -33,8 +33,13 @@ void GameMap::drawBackground(QGraphicsScene* scene) {
     QPixmap background(m_levelData.backgroundPath);
 
     if (background.isNull()) {
-        qDebug() << "ERROR: Failed to load background image:" << m_levelData.backgroundPath;
-        scene->addSimpleText("Background image load failed: " + m_levelData.backgroundPath);
+        qDebug() << "ERROR: Failed to load background image:" << m_levelData.backgroundPath
+                 << "fallback to :/images/background.png";
+        background.load(":/images/background.png");
+    }
+
+    if (background.isNull()) {
+        scene->setBackgroundBrush(QBrush(QColor("#1E1E1E")));
         return;
     }
 
@@ -216,6 +221,33 @@ QVector<QPointF> GameMap::getWayPoints() const {
         int col = point.y();
 
         result.push_back(gridToSceneCenter(row, col));
+    }
+
+    return result;
+}
+
+QVector<QVector<QPointF>> GameMap::getWayPointPaths() const {
+    QVector<QVector<QPointF>> result;
+
+    if (m_levelData.wayPointPaths.isEmpty()) {
+        const QVector<QPointF> path = getWayPoints();
+        if (!path.isEmpty()) {
+            result.append(path);
+        }
+        return result;
+    }
+
+    for (const QVector<QPoint>& gridPath : m_levelData.wayPointPaths) {
+        QVector<QPointF> scenePath;
+        scenePath.reserve(gridPath.size());
+
+        for (const QPoint& point : gridPath) {
+            scenePath.append(gridToSceneCenter(point.x(), point.y()));
+        }
+
+        if (!scenePath.isEmpty()) {
+            result.append(scenePath);
+        }
     }
 
     return result;

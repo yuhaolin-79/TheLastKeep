@@ -1,18 +1,11 @@
-/* 目录 src/ui/pages
- * 功能 开始界面
- * 负责显示 游戏主背景 开始游戏按钮和退出游戏按钮
- */
-
 #pragma once
 
-#include <QWidget>
 #include <QPixmap>
+#include <QWidget>
 
 class QPushButton;
+class QString;
 
-// StartPage：开始页面
-// 职责：只显示按钮，只发信号。
-// 不负责真正开始游戏。
 class StartPage : public QWidget {
     Q_OBJECT
 
@@ -22,6 +15,7 @@ public:
 signals:
     void startClicked();
     void levelSelectClicked();
+    void settingsClicked();
     void quitClicked();
 
 protected:
@@ -34,8 +28,8 @@ private:
 private:
     QPushButton *m_startButton = nullptr;
     QPushButton *m_levelSelectButton = nullptr;
+    QPushButton *m_settingsButton = nullptr;
     QPushButton *m_quitButton = nullptr;
 
-    //主页面背景图
     QPixmap m_background;
 };

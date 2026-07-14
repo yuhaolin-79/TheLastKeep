@@ -1,16 +1,16 @@
-/* 目录 src/ui/pages
- * 功能 关卡选择页面
- * 显示 引导关卡 第一关 第二关 ... 返回按钮
+/* Directory: src/ui/pages
+ * Purpose: level selection page.
+ * Shows the level select background, level buttons, and back button.
  */
 
 #pragma once
 
 #include <QWidget>
+#include <QPixmap>
 
 class QPushButton;
+class QString;
 
-// LevelSelectPage：关卡选择页面
-// 职责：只负责显示关卡按钮，并发出 levelSelected(levelId) 信号。
 class LevelSelectPage : public QWidget {
     Q_OBJECT
 
@@ -21,8 +21,12 @@ signals:
     void levelSelected(int levelId);
     void backClicked();
 
+protected:
+    void paintEvent(QPaintEvent *event) override;
+
 private:
     void setupUi();
+    void setupImageButton(QPushButton *button, const QString &imagePath);
 
 private:
     QPushButton *m_tutorialButton = nullptr;
@@ -30,4 +34,6 @@ private:
     QPushButton *m_level2Button = nullptr;
     QPushButton *m_level3Button = nullptr;
     QPushButton *m_backButton = nullptr;
+
+    QPixmap m_background;
 };

@@ -21,6 +21,7 @@ class QGraphicsView;
 class GameScene;
 class GameController;
 class HUDWidget;
+class CardSelectWidget;
 
 class GamePage : public QWidget {
     Q_OBJECT
@@ -63,10 +64,12 @@ private:
     GameScene *m_scene = nullptr;
     GameController *m_controller = nullptr;
     HUDWidget *m_hud = nullptr;
+    CardSelectWidget *m_cardSelect = nullptr;
 
     int m_currentLevelId = -1;
 
     bool m_started = false;
+    bool m_finishHandled = false;
 
     // 如果页面隐藏前游戏正在运行，则切回来时自动恢复
     bool m_shouldResumeWhenShown = false;

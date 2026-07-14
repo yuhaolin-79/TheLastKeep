@@ -17,6 +17,7 @@
 #include "scene/GameScene.h"
 #include "core/GameController.h"
 #include "common/GameConstants.h"
+#include "ui/widgets/CardSelectWidget.h"
 #include "ui/widgets/HUDWidget.h"
 
 #include <QGraphicsView>
@@ -26,6 +27,7 @@
 #include <QHideEvent>
 #include <QResizeEvent>
 #include <QShowEvent>
+#include <QTimer>
 #include <QDebug>
 
 GamePage::GamePage(QWidget *parent)
@@ -60,10 +62,13 @@ void GamePage::setupUi()
 
     m_controller = new GameController(m_scene, this);
 
-    // HUD 作为 GamePage 的覆盖层存在，不再进入主布局。
+    // HUD 作为 GamePage 的覆盖层存在，不进入主布局。
     // 这样游戏地图仍占满整个页面，HUD 和暂停/返回按钮视觉上浮在背景上。
     m_hud = new HUDWidget(this);
     m_hud->raise();
+
+    m_cardSelect = new CardSelectWidget(this);
+    m_cardSelect->hide();
 
     mainLayout->addWidget(m_view);
     updateHudGeometry();
@@ -79,7 +84,8 @@ void GamePage::setupConnections()
 
     connect(m_hud, &HUDWidget::towerSelected,
             m_controller, &GameController::setSelectedTowerType);
-connect(m_controller, &GameController::statusChanged,
+
+    connect(m_controller, &GameController::statusChanged,
             this, [this](GameStatus status) {
                 if(!m_hud){
                     return;
@@ -96,6 +102,31 @@ connect(m_controller, &GameController::statusChanged,
 
     connect(m_controller, &GameController::gameFinished,
             this, &GamePage::handleGameFinished);
+
+    connect(m_controller, &GameController::cardChoicesReady,
+            this, [this](const QVector<CardInfo> &cards) {
+                if (!m_started || !m_cardSelect) {
+                    return;
+                }
+
+                m_cardSelect->setCards(cards);
+                m_cardSelect->setGeometry(rect());
+                m_cardSelect->show();
+                m_cardSelect->raise();
+            });
+
+    connect(m_cardSelect, &CardSelectWidget::cardSelected,
+            this, [this](CardType type) {
+                if (m_cardSelect) {
+                    m_cardSelect->hide();
+                }
+                if (m_controller) {
+                    m_controller->selectBuffCard(type);
+                }
+                if (m_hud) {
+                    m_hud->raise();
+                }
+            });
 }
 
 void GamePage::startLevel(int levelId)
@@ -104,7 +135,11 @@ void GamePage::startLevel(int levelId)
 
     m_currentLevelId = levelId;
     m_started = true;
+    m_finishHandled = false;
     m_shouldResumeWhenShown = false;
+    if (m_cardSelect) {
+        m_cardSelect->hide();
+    }
 
     if (!m_controller->loadLevel(levelId)) {
         qWarning() << "GamePage::startLevel failed";
@@ -136,6 +171,10 @@ void GamePage::stopGame()
     m_controller->stopGame();
     m_controller->clearGame();
 
+    if (m_cardSelect) {
+        m_cardSelect->hide();
+    }
+
     m_started = false;
     m_shouldResumeWhenShown = false;
 }
@@ -164,6 +203,9 @@ void GamePage::showEvent(QShowEvent *event)
     updateHudGeometry();
     if(m_hud){
         m_hud->raise();
+    }
+    if (m_cardSelect && m_cardSelect->isVisible()) {
+        m_cardSelect->raise();
     }
     resumeBecauseShown();
 }
@@ -209,6 +251,9 @@ void GamePage::updateHudGeometry()
     const int hudHeight = 76;
     const int sideMargin = 14;
     m_hud->setGeometry(sideMargin, 8, qMax(0, width() - sideMargin * 2), hudHeight);
+    if (m_cardSelect) {
+        m_cardSelect->setGeometry(rect());
+    }
 }
 
 void GamePage::handlePauseOrResumeClicked()
@@ -232,6 +277,13 @@ void GamePage::handleBackClicked()
 
 void GamePage::handleGameFinished(bool win, int score)
 {
-    stopGame();
+    if (m_finishHandled) {
+        return;
+    }
+
+    m_finishHandled = true;
+    m_started = false;
+    m_shouldResumeWhenShown = false;
+
     emit gameFinished(win, score);
 }

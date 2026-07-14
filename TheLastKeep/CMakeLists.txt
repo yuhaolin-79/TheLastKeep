@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.19)
 project(TheLastKeep LANGUAGES CXX)
 
-find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets)
+find_package(Qt6 6.5 REQUIRED COMPONENTS Core Widgets Multimedia)
 
 qt_standard_project_setup()
 
@@ -20,6 +20,10 @@ qt_add_executable(TheLastKeep
     src/ui/pages/StartPage.cpp
     src/ui/pages/LevelSelectPage.h
     src/ui/pages/LevelSelectPage.cpp
+    src/ui/pages/SettingsPage.h
+    src/ui/pages/SettingsPage.cpp
+    src/ui/pages/StoryPage.h
+    src/ui/pages/StoryPage.cpp
     src/ui/pages/GamePage.h
     src/ui/pages/GamePage.cpp
     src/ui/pages/ResultPage.h
@@ -90,10 +94,9 @@ qt_add_resources(TheLastKeep "game_resources"
         resources/images/bullet_flame.png
         resources/images/bullet_magic.png
         resources/images/bullet_shrine.png
-        resources/images/card0.png
-        resources/images/card1.png
-        resources/images/card2.png
-        resources/images/card3.png
+        resources/images/coin_buff.png
+        resources/images/random_buff.png
+        resources/images/tower_buff.png
         resources/images/coin.png
         resources/images/effect_cannon.png
         resources/images/effect_common.png
@@ -107,6 +110,12 @@ qt_add_resources(TheLastKeep "game_resources"
         resources/images/enemy_wildmonster.png
         resources/images/guidedmap.png
         resources/images/HUD.png
+        resources/images/Level_select_background.png
+        resources/images/level01Map.png
+        resources/images/level02Map.png
+        resources/images/level03Map.png
+        resources/images/victory.png
+        resources/images/defeat.png
         resources/images/image.png
         resources/images/image-1.png
         resources/images/image-2.png
@@ -118,9 +127,21 @@ qt_add_resources(TheLastKeep "game_resources"
         resources/images/tower_magic.png
         resources/images/tower_shrine.png
         resources/images/tutorialLevelMap.png
+        resources/images/ui/back_button.png
         resources/images/ui/level_select_button.png
+        resources/images/ui/level01_button.png
+        resources/images/ui/level02_button.png
+        resources/images/ui/level03_button.png
         resources/images/ui/quit_button.png
         resources/images/ui/start_button.png
+        resources/images/ui/tutorial_level_button.png
+        resources/images/ui/setting_button.png
+        resources/story.txt
+        resources/story_level01.txt
+        resources/story_level02.txt
+        resources/story_level03.txt
+        resources/sounds/main_music.mp3
+        resources/sounds/button_click.mp3
 )
 
 target_include_directories(TheLastKeep
@@ -132,6 +153,7 @@ target_link_libraries(TheLastKeep
     PRIVATE
         Qt::Core
         Qt::Widgets
+        Qt::Multimedia
 )
 
 install(TARGETS TheLastKeep

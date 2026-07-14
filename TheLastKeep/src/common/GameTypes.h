@@ -14,6 +14,7 @@ enum class GameStatus {
     LevelSelect, //关卡选择
     Running,     //游戏运行中，QTimer运行
     Paused,      //暂停，QTimer停止
+    CardSelection, //波次结束，等待玩家选择卡牌
     Win,         //胜利
     Lose,        //失败
 };

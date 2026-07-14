@@ -12,17 +12,20 @@
 #include "core/BattleSystem.h"
 #include "entity/Castle.h"
 #include "entity/Tower.h"
+#include "level/LevelManager.h"
 
 #include <QDebug>
 #include <QList>
+#include <QLineF>
+#include <QScopedValueRollback>
 
 GameController::GameController(GameScene *scene, QObject *parent)
     : QObject(parent),
     m_scene(scene),
     m_timer(new QTimer(this)),
-    m_castleMaxHp(1000),
-    m_castleCurrentHp(1000),
-    m_gold(200),
+    m_castleMaxHp(GameConstants::DefaultCastleMaxHp),
+    m_castleCurrentHp(GameConstants::DefaultCastleMaxHp),
+    m_gold(GameConstants::DefaultInitialGold),
     m_cardMgr(this)
 {
     // QTimer 每触发一次 timeout 就调用 updateFrame()。
@@ -51,9 +54,10 @@ bool GameController::loadLevel(int levelId){
     clearBattleObjects();
 
     m_currentLevelId = levelId;
-    m_scene->loadTutorialLevel();
+    const LevelData levelData = LevelManager::createLevel(levelId);
+    m_scene->loadLevel(levelData);
 
-    setupTutorialBattlePrototype();
+    setupBattleForLevel(levelData);
 
     m_loaded = true;
     m_pausedByPageHidden = false;
@@ -150,7 +154,10 @@ bool GameController::canBuildTower(int cost) const
 
 void GameController::damageCastle(int damage)
 {
-    if (damage <= 0) return;
+    if (damage <= 0 || m_finishEmitted) return;
+    if (m_stateManager.status() == GameStatus::Lose || m_stateManager.status() == GameStatus::Win) {
+        return;
+    }
     m_castleCurrentHp -= damage;
     if (m_castleCurrentHp < 0) m_castleCurrentHp = 0;
 
@@ -161,8 +168,9 @@ void GameController::damageCastle(int damage)
     emitStatsChanged();
     qDebug() << "Castle damage:" << damage << "HP:" << m_castleCurrentHp << "/" << m_castleMaxHp;
 
-    if (m_castleCurrentHp <= 0) {
+    if (m_castleCurrentHp <= 0 && m_stateManager.status() != GameStatus::Lose) {
         stopTimerSafely();
+        m_finishEmitted = true;
         m_stateManager.setStatus(GameStatus::Lose);
         emit statusChanged(GameStatus::Lose);
         emit gameFinished(false, 0);
@@ -244,9 +252,11 @@ GameStatus GameController::status() const
 
 void GameController::updateFrame()
 {
-    if (!m_stateManager.canUpdateGame()) {
+    if (!m_stateManager.canUpdateGame() || m_updatingFrame) {
         return;
     }
+
+    QScopedValueRollback<bool> frameGuard(m_updatingFrame, true);
 
     updateWaveSpawn();
 
@@ -257,23 +267,31 @@ void GameController::updateFrame()
     // 当前波已刷完且场上敌人清空，进入波间状态。
     if(m_battleSystem
         && !m_waveSpawning
-        && !m_waitingForNextWave
+        && !m_waitingForCardSelection
         && m_spawnIndex >= m_pendingEnemies.size()
         && m_battleSystem->isWaveAllClear()){
 
-        QVector<CardInfo> cards = waveFinishShowCard();
-        qDebug() << "Wave" << m_currentWave << "clear, generated card choices:" << cards.size();
-
         if(m_currentWave >= m_totalWaves){
+            if (m_stateManager.status() == GameStatus::Win || m_stateManager.status() == GameStatus::Lose) {
+                return;
+            }
             stopTimerSafely();
+            m_finishEmitted = true;
             m_stateManager.setStatus(GameStatus::Win);
             emit statusChanged(GameStatus::Win);
             emit gameFinished(true, m_gold + m_castleCurrentHp);
             return;
         }
 
-        m_waitingForNextWave = true;
-        m_betweenWaveElapsedMs = 0;
+        m_waitingForCardSelection = true;
+        stopTimerSafely();
+        m_stateManager.setStatus(GameStatus::CardSelection);
+        emit statusChanged(GameStatus::CardSelection);
+
+        const QVector<CardInfo> cards = waveFinishShowCard();
+        qDebug() << "Wave" << m_currentWave << "clear, generated card choices:" << cards.size();
+        emit cardChoicesReady(cards);
+        return;
     }
 }
 
@@ -299,39 +317,69 @@ void GameController::stopTimerSafely()
     }
 }
 
-void GameController::setupTutorialBattlePrototype()
+void GameController::setupBattleForLevel(const LevelData &levelData)
 {
     if(!m_scene){
         return;
     }
 
-    m_currentPath = m_scene->currentWayPoints();
-    if(m_currentPath.isEmpty()){
-        qWarning() << "Tutorial battle setup failed: empty path";
+    m_currentPaths = m_scene->currentWayPointPaths();
+    if(m_currentPaths.isEmpty()){
+        qWarning() << "Battle setup failed: empty path";
         return;
     }
 
     m_castleCurrentHp = m_castleMaxHp;
-    m_gold = 260;
+    m_gold = levelData.initialGold;
     m_currentWave = 0;
     m_spawnIndex = 0;
     m_spawnElapsedMs = 0;
     m_waveSpawning = false;
-    m_waitingForNextWave = false;
-    m_betweenWaveElapsedMs = 0;
+    m_waitingForCardSelection = false;
+    m_finishEmitted = false;
     m_cardMgr.resetAllBuff();
 
-    // 城堡放在路径最后一个点。Castle 内部用 offset 把贴图中心对齐到该坐标。
-    m_castle = new Castle(m_currentPath.last(), this);
+    m_castle = new Castle(m_currentPaths.first().last(), this);
     m_scene->addItem(m_castle);
 
     m_battleSystem = new BattleSystem(this, m_castle, m_scene, this);
-
-    // 防御塔不再预放置。玩家需要点击可建塔区域，用金币购买并放置默认箭塔。
-    // 后续可以在 HUD 或塔盘中选择不同塔型，这里先完成购买和占位闭环。
     m_builtTowerGrids.clear();
 
+    for (const InitialTowerPlacement &placement : levelData.initialTowers) {
+        addInitialTower(placement);
+    }
+
     startNextWave();
+}
+
+void GameController::addInitialTower(const InitialTowerPlacement &placement)
+{
+    if (!m_scene || !m_battleSystem) {
+        return;
+    }
+
+    const QPoint gridPos(placement.row, placement.col);
+    if (!m_scene->canBuildAtGrid(gridPos)) {
+        qWarning() << "Initial tower ignored: grid is not buildable" << gridPos;
+        return;
+    }
+
+    if (m_builtTowerGrids.contains(gridPos)) {
+        qWarning() << "Initial tower ignored: duplicated grid" << gridPos;
+        return;
+    }
+
+    TowerType type = TowerType::ArrowTower;
+    if (placement.towerType >= static_cast<int>(TowerType::ArrowTower)
+        && placement.towerType <= static_cast<int>(TowerType::HolyTower)) {
+        type = static_cast<TowerType>(placement.towerType);
+    }
+
+    Tower* tower = new Tower(type,
+                             m_scene->tileCenter(placement.row, placement.col),
+                             this);
+    m_battleSystem->addTower(tower);
+    m_builtTowerGrids.append(gridPos);
 }
 
 void GameController::clearBattleObjects()
@@ -348,7 +396,7 @@ void GameController::clearBattleObjects()
     delete m_castle;
     m_castle = nullptr;
 
-    m_currentPath.clear();
+    m_currentPaths.clear();
     m_pendingEnemies.clear();
     m_builtTowerGrids.clear();
 }
@@ -364,8 +412,7 @@ void GameController::startNextWave()
     m_spawnIndex = 0;
     m_spawnElapsedMs = m_spawnIntervalMs;
     m_waveSpawning = true;
-    m_waitingForNextWave = false;
-    m_betweenWaveElapsedMs = 0;
+    m_waitingForCardSelection = false;
 
     emitStatsChanged();
     qDebug() << "Wave started:" << m_currentWave << "enemy count:" << m_pendingEnemies.size();
@@ -373,15 +420,11 @@ void GameController::startNextWave()
 
 void GameController::updateWaveSpawn()
 {
-    if(m_waitingForNextWave){
-        m_betweenWaveElapsedMs += GameConstants::FrameIntervalMs;
-        if(m_betweenWaveElapsedMs >= m_betweenWaveDelayMs){
-            startNextWave();
-        }
+    if(m_waitingForCardSelection){
         return;
     }
 
-    if(!m_waveSpawning || !m_battleSystem || m_currentPath.isEmpty()){
+    if(!m_waveSpawning || !m_battleSystem || m_currentPaths.isEmpty()){
         return;
     }
 
@@ -397,8 +440,13 @@ void GameController::updateWaveSpawn()
         return;
     }
 
-    Enemy* enemy = new Enemy(m_currentPath, m_pendingEnemies[m_spawnIndex], this);
-    enemy->setPos(m_currentPath.first() - QPointF(48.0, 0));
+    const QVector<QPointF>& path = m_currentPaths[m_spawnIndex % m_currentPaths.size()];
+    Enemy* enemy = new Enemy(path, m_pendingEnemies[m_spawnIndex], this);
+    if (path.size() > 1) {
+        QLineF entryDirection(path.first(), path[1]);
+        entryDirection.setLength(48.0);
+        enemy->setPos(path.first() - (entryDirection.p2() - entryDirection.p1()));
+    }
     m_battleSystem->spawnEnemy(enemy);
     ++m_spawnIndex;
 
@@ -409,18 +457,23 @@ void GameController::updateWaveSpawn()
 
 QVector<EnemyType> GameController::createWaveTypes(int wave) const
 {
-    if(wave <= 1){
-        return {
+    const int levelIndex = qBound(0, m_currentLevelId, 3);
+    const int waveIndex = qBound(1, wave, 3);
+    const int targetCount = 2 + waveIndex + levelIndex * 2;
+
+    QVector<EnemyType> enemyTypes;
+    enemyTypes.reserve(targetCount);
+
+    QVector<EnemyType> typePool;
+    if (waveIndex == 1) {
+        typePool = {
             EnemyType::NormalGoblin,
             EnemyType::NormalGoblin,
             EnemyType::WolfRider,
-            EnemyType::NormalGoblin,
             EnemyType::HeavyArmor
         };
-    }
-
-    if(wave == 2){
-        return {
+    } else if (waveIndex == 2) {
+        typePool = {
             EnemyType::NormalGoblin,
             EnemyType::WolfRider,
             EnemyType::HeavyArmor,
@@ -428,16 +481,26 @@ QVector<EnemyType> GameController::createWaveTypes(int wave) const
             EnemyType::WolfRider,
             EnemyType::HeavyArmor
         };
+    } else {
+        typePool = {
+            EnemyType::WolfRider,
+            EnemyType::HeavyArmor,
+            EnemyType::Wizard,
+            EnemyType::NormalGoblin,
+            EnemyType::HeavyArmor
+        };
     }
 
-    return {
-        EnemyType::WolfRider,
-        EnemyType::HeavyArmor,
-        EnemyType::Wizard,
-        EnemyType::NormalGoblin,
-        EnemyType::HeavyArmor,
-        EnemyType::Boss
-    };
+    const int regularEnemyCount = waveIndex == 3 ? targetCount - 1 : targetCount;
+    for (int i = 0; i < regularEnemyCount; ++i) {
+        enemyTypes.append(typePool[i % typePool.size()]);
+    }
+
+    if (waveIndex == 3) {
+        enemyTypes.append(EnemyType::Boss);
+    }
+
+    return enemyTypes;
 }
 
 void GameController::setSelectedTowerType(TowerType type)
@@ -512,7 +575,21 @@ QVector<CardInfo> GameController::waveFinishShowCard(){
 }
 
 void GameController::selectBuffCard(CardType type){
+    if (!m_loaded
+        || !m_waitingForCardSelection
+        || m_stateManager.status() != GameStatus::CardSelection) {
+        return;
+    }
+
     m_cardMgr.selectOneCard(type);
+    startNextWave();
+
+    m_stateManager.setStatus(GameStatus::Running);
+    startTimerSafely();
+    emit statusChanged(GameStatus::Running);
+    emitStatsChanged();
+
+    qDebug() << "Card selected, next wave started:" << static_cast<int>(type);
 }
 
 BuffState GameController::getGlobalBuff()const{
@@ -521,7 +598,7 @@ BuffState GameController::getGlobalBuff()const{
 
 void GameController::gameRestartReset(){
     m_castleCurrentHp = m_castleMaxHp;
-    m_gold = 260;
+    m_gold = LevelManager::createLevel(m_currentLevelId).initialGold;
     m_cardMgr.resetAllBuff();
     emitStatsChanged();
 }

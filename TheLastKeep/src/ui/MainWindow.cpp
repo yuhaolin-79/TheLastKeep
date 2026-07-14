@@ -1,31 +1,22 @@
-/* 目录 src/ui/Mainwindow.h
- * 功能 主窗口 只负责页面切换，严禁写入其他逻辑
- */
-
-
-#include "ui/Mainwindow.h"
-
-#include "ui/pages/StartPage.h"
-#include "ui/pages/LevelSelectPage.h"
-#include "ui/pages/GamePage.h"
-#include "ui/pages/ResultPage.h"
+#include "ui/MainWindow.h"
 
 #include "common/GameConstants.h"
+#include "data/SoundManager.h"
+#include "level/LevelManager.h"
+#include "ui/pages/GamePage.h"
+#include "ui/pages/LevelSelectPage.h"
+#include "ui/pages/ResultPage.h"
+#include "ui/pages/SettingsPage.h"
+#include "ui/pages/StartPage.h"
+#include "ui/pages/StoryPage.h"
 
-// #include <QFrame>
-// #include <QGraphicsView>
-
-
-// #include <QPushButton>
-// #include <QVBoxLayout>
-// #include <QLabel>
-// #include <QPainter>
-
+#include <QAbstractButton>
+#include <QApplication>
+#include <QEvent>
+#include <QMouseEvent>
 #include <QDebug>
 #include <QStackedWidget>
-
-// #include "scene/GameScene.h"
-
+#include <QTimer>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -33,10 +24,12 @@ MainWindow::MainWindow(QWidget *parent)
     setupUi();
     setupConnections();
 
+    SoundManager::instance().startBackgroundMusic();
     showStartPage();
 }
 
-void MainWindow::setupUi() {
+void MainWindow::setupUi()
+{
     setWindowTitle("The Last Keep");
     resize(GameConstants::WindowWidth, GameConstants::WindowHeight);
 
@@ -44,33 +37,64 @@ void MainWindow::setupUi() {
 
     m_startPage = new StartPage(this);
     m_levelSelectPage = new LevelSelectPage(this);
+    m_settingsPage = new SettingsPage(this);
+    m_storyPage = new StoryPage(this);
     m_gamePage = new GamePage(this);
     m_resultPage = new ResultPage(this);
 
+    m_settingsPage->setMusicEnabled(SoundManager::instance().isMusicEnabled());
+
     m_stack->addWidget(m_startPage);
     m_stack->addWidget(m_levelSelectPage);
+    m_stack->addWidget(m_settingsPage);
+    m_stack->addWidget(m_storyPage);
     m_stack->addWidget(m_gamePage);
     m_stack->addWidget(m_resultPage);
 
     setCentralWidget(m_stack);
+    qApp->installEventFilter(this);
 }
 
-void MainWindow::setupConnections() {
-    connect(m_startPage, &StartPage::startClicked, this, [=]{
-        startLevel(0);
+void MainWindow::setupConnections()
+{
+    connect(m_startPage, &StartPage::startClicked, this, [this] {
+        prepareStoryForLevel(0, m_startPage);
     });
 
     connect(m_startPage, &StartPage::levelSelectClicked,
             this, &MainWindow::showLevelSelectPage);
 
+    connect(m_startPage, &StartPage::settingsClicked,
+            this, &MainWindow::showSettingsPage);
+
     connect(m_startPage, &StartPage::quitClicked,
             this, &MainWindow::close);
 
     connect(m_levelSelectPage, &LevelSelectPage::levelSelected,
-            this, &MainWindow::startLevel);
+            this, [this](int levelId) {
+                prepareStoryForLevel(levelId, m_levelSelectPage);
+            });
 
     connect(m_levelSelectPage, &LevelSelectPage::backClicked,
             this, &MainWindow::showStartPage);
+
+    connect(m_settingsPage, &SettingsPage::musicEnabledChanged,
+            this, [](bool enabled) {
+                SoundManager::instance().setMusicEnabled(enabled);
+            });
+
+    connect(m_settingsPage, &SettingsPage::backClicked,
+            this, &MainWindow::showStartPage);
+
+    connect(m_storyPage, &StoryPage::continueClicked,
+            this, [this] {
+                queueStartLevel(m_pendingStoryLevelId);
+            });
+
+    connect(m_storyPage, &StoryPage::backClicked,
+            this, [this] {
+                switchTo(m_storyReturnPage ? m_storyReturnPage : static_cast<QWidget *>(m_startPage));
+            });
 
     connect(m_gamePage, &GamePage::requestBackToMenu,
             this, &MainWindow::backToMenu);
@@ -79,20 +103,41 @@ void MainWindow::setupConnections() {
             this, &MainWindow::showResultPage);
 
     connect(m_resultPage, &ResultPage::backToMenuClicked,
-            this, &MainWindow::backToMenu);
+            this, &MainWindow::showLevelSelectPage);
 
     connect(m_resultPage, &ResultPage::restartClicked,
-            this, [=]() {
-                startLevel(m_lastLevelId);
+            this, [this]() {
+                queueStartLevel(m_lastLevelId);
             });
 
     connect(m_resultPage, &ResultPage::nextLevelClicked,
-            this, [=](int nextLevelId) {
-                startLevel(nextLevelId);
+            this, [this](int nextLevelId) {
+                if (nextLevelId < 0 || nextLevelId > 3) {
+                    showStartPage();
+                    return;
+                }
+                prepareStoryForLevel(nextLevelId, m_resultPage);
             });
+
+    connect(m_resultPage, &ResultPage::autoReturnToMainRequested,
+            this, &MainWindow::showStartPage);
 }
 
-void MainWindow::switchTo(QWidget *page){
+bool MainWindow::eventFilter(QObject *watched, QEvent *event)
+{
+    auto *button = qobject_cast<QAbstractButton *>(watched);
+    if (button && button->isEnabled() && event->type() == QEvent::MouseButtonPress) {
+        auto *mouseEvent = static_cast<QMouseEvent *>(event);
+        if (mouseEvent->button() == Qt::LeftButton) {
+            SoundManager::instance().playButtonClick();
+        }
+    }
+
+    return QMainWindow::eventFilter(watched, event);
+}
+
+void MainWindow::switchTo(QWidget *page)
+{
     if (!page) {
         return;
     }
@@ -101,8 +146,10 @@ void MainWindow::switchTo(QWidget *page){
         return;
     }
 
-    // 旧页面如果是 GamePage，需要通知它“你要被隐藏了”
-    // GamePage 内部会暂停 QTimer
+    if (m_currentPage == m_resultPage) {
+        m_resultPage->stopAutoReturnTimer();
+    }
+
     if (auto oldGamePage = qobject_cast<GamePage *>(m_currentPage)) {
         oldGamePage->onPageHiddenByStack();
     }
@@ -110,42 +157,80 @@ void MainWindow::switchTo(QWidget *page){
     m_stack->setCurrentWidget(page);
     m_currentPage = page;
 
-    // 新页面如果是 GamePage，需要通知它“你又显示出来了”
-    // GamePage 内部会判断是否需要恢复 QTimer
     if (auto newGamePage = qobject_cast<GamePage *>(page)) {
         newGamePage->onPageShownByStack();
     }
 }
 
-void MainWindow::showStartPage(){
+void MainWindow::prepareStoryForLevel(int levelId, QWidget *returnPage)
+{
+    m_pendingStoryLevelId = levelId;
+    m_storyReturnPage = returnPage;
+    m_storyPage->setLevel(levelId);
+    switchTo(m_storyPage);
+}
+
+void MainWindow::showStartPage()
+{
     switchTo(m_startPage);
 }
 
-void MainWindow::showLevelSelectPage(){
+void MainWindow::showLevelSelectPage()
+{
     switchTo(m_levelSelectPage);
 }
 
-void MainWindow::startLevel(int levelId){
+void MainWindow::showSettingsPage()
+{
+    m_settingsPage->setMusicEnabled(SoundManager::instance().isMusicEnabled());
+    switchTo(m_settingsPage);
+}
+
+void MainWindow::startLevel(int levelId)
+{
     qDebug() << "MainWindow start level:" << levelId;
 
     m_lastLevelId = levelId;
 
-    // 先切到 GamePage
     switchTo(m_gamePage);
-
-    // 再让 GamePage 开始关卡
-    // MainWindow 不直接碰 GameScene 和 QTimer
     m_gamePage->startLevel(levelId);
 }
 
-void MainWindow::showResultPage(bool win, int score){
-    m_resultPage->setResult(win, score, m_lastLevelId);
-    switchTo(m_resultPage);
+void MainWindow::queueStartLevel(int levelId)
+{
+    if (m_levelTransitionPending) {
+        return;
+    }
+
+    m_levelTransitionPending = true;
+    QTimer::singleShot(0, this, [this, levelId]() {
+        startLevel(levelId);
+        m_levelTransitionPending = false;
+    });
 }
 
-void MainWindow::backToMenu(){
-    // 返回主菜单时，必须彻底停止游戏
-    // 先停 QTimer，再清场景，再切页面
+void MainWindow::showResultPage(bool win, int score)
+{
+    if (m_levelTransitionPending) {
+        return;
+    }
+
+    m_levelTransitionPending = true;
+    const int finishedLevelId = m_lastLevelId;
+    QTimer::singleShot(0, this, [this, win, score, finishedLevelId]() {
+        if (m_gamePage) {
+            m_gamePage->stopGame();
+        }
+
+        const LevelData levelData = LevelManager::createLevel(finishedLevelId);
+        m_resultPage->setResult(win, score, finishedLevelId, levelData.backgroundPath);
+        switchTo(m_resultPage);
+        m_levelTransitionPending = false;
+    });
+}
+
+void MainWindow::backToMenu()
+{
     if (m_gamePage) {
         m_gamePage->stopGame();
     }
