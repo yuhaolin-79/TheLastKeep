@@ -32,6 +32,12 @@ BattleSystem::BattleSystem(GameController* gameCtrl,
 void BattleSystem::frameUpdate(){
     updateAllTowers();
     updateAllEnemies();
+
+    if (!m_gameController || !m_gameController->isRunning()) {
+        cleanDeadEnemies();
+        return;
+    }
+
     updateAllBullets();
     runGlobalCollisionCheck();
     cleanDeadEnemies();
@@ -86,23 +92,23 @@ int BattleSystem::activeEnemyCount() const
 }
 
 void BattleSystem::clearAllBattleObjects(){
-    for (Tower* t:m_towerContainer){
-        if(m_scene && t && t->scene() == m_scene) m_scene->removeItem(t);
-        delete t;
+    while (!m_bulletContainer.isEmpty()) {
+        Bullet* bullet = m_bulletContainer.takeLast();
+        if(m_scene && bullet && bullet->scene() == m_scene) m_scene->removeItem(bullet);
+        delete bullet;
     }
-    m_towerContainer.clear();
 
-    for (Enemy* e:m_enemyContainer){
-        if(m_scene && e && e->scene() == m_scene) m_scene->removeItem(e);
-        delete e;
+    while (!m_enemyContainer.isEmpty()) {
+        Enemy* enemy = m_enemyContainer.takeLast();
+        if(m_scene && enemy && enemy->scene() == m_scene) m_scene->removeItem(enemy);
+        delete enemy;
     }
-    m_enemyContainer.clear();
 
-    for (Bullet* b:m_bulletContainer){
-        if(m_scene && b && b->scene() == m_scene) m_scene->removeItem(b);
-        delete b;
+    while (!m_towerContainer.isEmpty()) {
+        Tower* tower = m_towerContainer.takeLast();
+        if(m_scene && tower && tower->scene() == m_scene) m_scene->removeItem(tower);
+        delete tower;
     }
-    m_bulletContainer.clear();
 }
 
 void BattleSystem::updateAllTowers(){
@@ -179,17 +185,25 @@ void BattleSystem::runGlobalCollisionCheck(){
 }
 
 void BattleSystem::cleanDeadEnemies(){
-    QList<Enemy*> aliveEnemies;
-    for (Enemy* e : m_enemyContainer){
-        if (!e || e->isDead()){
-            if(m_scene && e && e->scene() == m_scene) m_scene->removeItem(e);
-            delete e;
+    for (int enemyIndex = m_enemyContainer.size() - 1; enemyIndex >= 0; --enemyIndex) {
+        Enemy* enemy = m_enemyContainer[enemyIndex];
+        if (enemy && !enemy->isDead()) {
+            continue;
         }
-        else{
-            aliveEnemies.append(e);
+
+        if (enemy) {
+            for (int bulletIndex = m_bulletContainer.size() - 1; bulletIndex >= 0; --bulletIndex) {
+                Bullet* bullet = m_bulletContainer[bulletIndex];
+                if (bullet && bullet->targetEnemy() == enemy) {
+                    removeBulletAt(bulletIndex);
+                }
+            }
         }
+
+        m_enemyContainer.removeAt(enemyIndex);
+        if(m_scene && enemy && enemy->scene() == m_scene) m_scene->removeItem(enemy);
+        delete enemy;
     }
-    m_enemyContainer.swap(aliveEnemies);
 }
 
 void BattleSystem::removeBulletAt(int index)
@@ -223,7 +237,9 @@ void BattleSystem::showHitEffect(const QPointF& pos, const QString& effectPath)
     item->setPos(pos);
     item->setZValue(40);
 
-    QTimer::singleShot(160, m_scene, [scene = m_scene, item]() {
+    // The effect belongs to this battle session. Binding the callback to the
+    // long-lived scene would let it survive cleanup after the item was deleted.
+    QTimer::singleShot(160, this, [scene = m_scene, item]() {
         if(item->scene() == scene){
             scene->removeItem(item);
         }

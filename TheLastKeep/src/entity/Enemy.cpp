@@ -76,8 +76,8 @@ void Enemy::initEnemyAttr(EnemyType type)
     switch (type)
     {
     case EnemyType::NormalGoblin:
-        m_maxHp = 100;
-        m_speed = 2;
+        m_maxHp = 130;
+        m_speed = 3;
         m_rewardGold = 10;
         m_castleDamage = 10;
         break;
@@ -88,13 +88,13 @@ void Enemy::initEnemyAttr(EnemyType type)
         m_castleDamage = 25;
         break;
     case EnemyType::WolfRider:
-        m_maxHp = 70;
+        m_maxHp = 90;
         m_speed = 4;
         m_rewardGold = 15;
         m_castleDamage = 15;
         break;
     case EnemyType::Wizard:
-        m_maxHp = 140;
+        m_maxHp = 160;
         m_speed = 2;
         m_rewardGold = 20;
         m_castleDamage = 20;

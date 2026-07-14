@@ -1,11 +1,15 @@
 # 编译输出目录
 build-mingw/
+build-package-msvc/
 build/
 Build/
 debug/
 release/
 Debug/
 Release/
+
+# 打包发布目录
+dist/
 
 # Qt 编译产物
 *.pro.user

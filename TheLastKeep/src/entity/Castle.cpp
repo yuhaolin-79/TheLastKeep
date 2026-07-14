@@ -7,6 +7,7 @@
  */
 
 #include "entity/Castle.h"
+#include "common/GameConstants.h"
 #include "core/GameController.h"
 #include <QColor>
 #include <QPainter>
@@ -35,8 +36,8 @@ static QPixmap loadCastlePixmap()
 Castle::Castle(QPointF pos, GameController* ctrl)
     : QGraphicsPixmapItem(nullptr),
     m_controller(ctrl),
-    m_maxHp(1000),
-    m_hp(1000)
+    m_maxHp(GameConstants::DefaultCastleMaxHp),
+    m_hp(GameConstants::DefaultCastleMaxHp)
 {
     setPos(pos);
     setPixmap(loadCastlePixmap());

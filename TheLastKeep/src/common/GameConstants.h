@@ -14,4 +14,10 @@ constexpr int WindowHeight = 720;
 // 游戏主循环间隔 33ms 实际体验大致为 30FPS
 constexpr int FrameIntervalMs = 33;
 
+// 所有关卡的初始金币
+constexpr int DefaultInitialGold = 100;
+
+// 城堡最大生命值
+constexpr int DefaultCastleMaxHp = 150;
+
 }

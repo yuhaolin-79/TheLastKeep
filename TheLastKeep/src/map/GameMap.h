@@ -49,6 +49,7 @@ public:
     bool isEnd(int row, int col) const;
 
     QVector<QPointF> getWayPoints() const;
+    QVector<QVector<QPointF>> getWayPointPaths() const;
 
     int rows() const;
     int cols() const;

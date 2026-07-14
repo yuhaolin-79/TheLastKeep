@@ -20,6 +20,7 @@
 #include "core/StateManager.h"
 #include "entity/Enemy.h"
 #include "entity/Tower.h"
+#include "level/LevelData.h"
 
 class BattleSystem;
 class Castle;
@@ -66,6 +67,7 @@ public:
 signals:
     void statusChanged(GameStatus status);
     void statsChanged(int gold, int hp, int maxHp, int wave, int totalWave);
+    void cardChoicesReady(const QVector<CardInfo> &cards);
     void gameFinished(bool win, int score);
 
 public slots:
@@ -79,7 +81,8 @@ public slots:
 private:
     void startTimerSafely();
     void stopTimerSafely();
-    void setupTutorialBattlePrototype();
+    void setupBattleForLevel(const LevelData &levelData);
+    void addInitialTower(const InitialTowerPlacement &placement);
     void clearBattleObjects();
     void startNextWave();
     void updateWaveSpawn();
@@ -105,7 +108,7 @@ private:
     Castle* m_castle = nullptr;
     BattleSystem* m_battleSystem = nullptr;
 
-    QVector<QPointF> m_currentPath;
+    QVector<QVector<QPointF>> m_currentPaths;
     QVector<QPoint> m_builtTowerGrids;
     QVector<EnemyType> m_pendingEnemies;
     int m_totalWaves = 3;
@@ -114,8 +117,8 @@ private:
     int m_spawnElapsedMs = 0;
     int m_spawnIntervalMs = 850;
     bool m_waveSpawning = false;
-    bool m_waitingForNextWave = false;
+    bool m_waitingForCardSelection = false;
+    bool m_updatingFrame = false;
+    bool m_finishEmitted = false;
     TowerType m_selectedTowerType = TowerType::ArrowTower;
-    int m_betweenWaveElapsedMs = 0;
-    int m_betweenWaveDelayMs = 1200;
 };

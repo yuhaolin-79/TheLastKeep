@@ -1,10 +1,3 @@
-/* 功能 游戏画布
- * 负责 显示地图 显示 QGraphicsItem
- *     处理鼠标点击 把点击位置发给 GameController
- *     拖拽建塔时显示放置辅助层
- *     清理场景
- */
-
 #pragma once
 
 #include <QGraphicsScene>
@@ -25,8 +18,10 @@ public:
     void setupScene();
     void clearSceneSafely();
 
+    void loadLevel(const LevelData &levelData);
     void loadTutorialLevel();
     QVector<QPointF> currentWayPoints() const;
+    QVector<QVector<QPointF>> currentWayPointPaths() const;
     QPointF tileCenter(int row, int col) const;
     QPoint gridForScenePos(const QPointF& scenePos) const;
     bool canBuildAtGrid(const QPoint& gridPos) const;

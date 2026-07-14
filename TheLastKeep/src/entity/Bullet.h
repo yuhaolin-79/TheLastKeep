@@ -26,6 +26,7 @@ public:
     bool hasLiveTarget() const;
     int getDamage() const;
     Tower* getShootTower()const;
+    Enemy* targetEnemy() const;
 
 private:
     Enemy* m_targetEnemy;

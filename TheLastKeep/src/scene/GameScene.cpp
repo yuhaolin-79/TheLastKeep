@@ -69,11 +69,9 @@ void GameScene::drawBackground()
     backgroundItem->setZValue(-100);
 }
 
-void GameScene::loadTutorialLevel()
+void GameScene::loadLevel(const LevelData &levelData)
 {
-    LevelData tutorialLevel = LevelManager::createTutorialLevel();
-
-    m_map.loadLevel(tutorialLevel);
+    m_map.loadLevel(levelData);
 
     clear();
     m_placementHintItems.clear();
@@ -86,14 +84,22 @@ void GameScene::loadTutorialLevel()
         );
 
     m_map.drawBackground(this);
-
-    // 默认不显示任何建塔辅助层；只有拖拽塔进入地图时才显示网格和区域颜色。
-
     update();
 }
+
+void GameScene::loadTutorialLevel()
+{
+    loadLevel(LevelManager::createTutorialLevel());
+}
+
 QVector<QPointF> GameScene::currentWayPoints() const
 {
     return m_map.getWayPoints();
+}
+
+QVector<QVector<QPointF>> GameScene::currentWayPointPaths() const
+{
+    return m_map.getWayPointPaths();
 }
 
 QPointF GameScene::tileCenter(int row, int col) const

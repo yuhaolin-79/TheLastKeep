@@ -84,3 +84,8 @@ Tower* Bullet::getShootTower() const
 {
     return m_shootTower;
 }
+
+Enemy* Bullet::targetEnemy() const
+{
+    return m_targetEnemy;
+}
