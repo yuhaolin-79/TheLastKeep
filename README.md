@@ -2,9 +2,7 @@
 
 > 一款基于 **Qt 6 + C++** 的经典 2D 塔防游戏。建造防御塔，抵御一波波敌人的进攻，守护最后一座要塞！
 
-<p align="center">
-  <img src="doc-images/logo.png" alt="The Last Keep" width="400">
-</p>
+![logo](TheLastKeep/resources/images/logo.png)
 
 ---
 
